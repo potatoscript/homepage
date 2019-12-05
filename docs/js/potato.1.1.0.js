@@ -1854,7 +1854,10 @@ var X = function() {
                     t = '<div id="div-' + l + '"> ';
                     t += '<input type="text" id="' + l + '"> '
                 }
-                t += '<div class="keypad" id="keypad-' + l + '"></div> ', t += "</div> ", this.innerHTML = "<br>" + t, _value = document.getElementById(l), "potato.now" == n.value && (n.value = e.now), "potato.today()" == n.value && (n.value = e.today()), "potato.now()" == n.value && (n.value = e.now()), $("#div-" + l).css({
+				
+                t += '<div class="keypad" id="keypad-' + l + '"></div> ', t += "</div> ", 
+				
+				this.innerHTML = "<br>" + t, _value = document.getElementById(l), "potato.now" == n.value && (n.value = e.now), "potato.today()" == n.value && (n.value = e.today()), "potato.now()" == n.value && (n.value = e.now()), $("#div-" + l).css({
                     display: n.display,
                     position: n.position,
                     left: n.left,
@@ -1884,14 +1887,14 @@ var X = function() {
                     if (parseFloat(n.topKey) >= 0) $("#keypad-" + l).css({
                         zIndex: "2000",
                         position: "absolute",
-                        top: parseFloat(event.clientY) + 20 + parseFloat(n.topKey) + parseFloat(a) + "px",
-                        left: parseFloat(event.clientX) + parseFloat(n.leftKey) - parseFloat(r) + "px"
+                        top: parseFloat(event.clientY) + 20 + parseFloat(n.topKey) + parseFloat(a),
+                        left: parseFloat(event.clientX) + parseFloat(n.leftKey) - parseFloat(r)
                     });
                     else {
                         var o = document.getElementById("keypad-" + l).offsetTop;
                         $("#keypad-" + l).css({
                             position: "absolute",
-                            top: parseFloat(o) + "px"
+                            top: parseFloat(o)
                         })
                     }
                     _value = document.getElementById(l);
@@ -1904,7 +1907,10 @@ var X = function() {
                             var i = String(_POTATOBindId[e]);
                             document.getElementById(i).innerText = document.getElementById(l).value
                         }
-                }), $("#keypad-" + l).load(n.htm).click(function() {
+                });
+				
+				
+				$("#keypad-" + l).load(n.htm).click(function() {
                     for (var t = 0; t < _POTATOId.length; t++)
                         if (l == String(_POTATOId[t])) {
                             var e = String(_POTATOBindId[t]);
