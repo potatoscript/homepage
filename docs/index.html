@@ -45,10 +45,21 @@ The available objects of potato.js:<br>
 potato.jsのオブジェクト：	
  <ul style="margin-left:50px">
 	<li>button　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OButton">OButton</a></li>
+	<potato-button-obutton 
+value="Click Me"
+image="image/img-p.png 21 21"		       
+onclick="alert('I am OButton')"
+></potato-button-obutton>
 	<li>calendar- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OCalendar">OCalendar</a></li>
 	<li>chart　 - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OChart">OChart</a></li>  
 	<li>keypad　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a></li> 
-	<li>list　　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OList">OList</a></li> 
+	<potato-keypad-okeypadex 
+value="0"
+left=0px
+top=0px
+htm="htm/keypad.htm"
+></potato-keypad-okeypadex>
+	 <li>list　　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OList">OList</a></li> 
 	<li>menu　　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a></li>  
 	<li>table　 - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a></li> 
 	<li>text　　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a></li>
@@ -61,12 +72,7 @@ potato.jsのオブジェクト：
 <img class="spotlight" aria-busy="false" style="width: 900px; height: 350px;" alt="画像に含まれている可能性があるもの:テキスト" src="potatoDemo.gif">
 <br><br>
 
-<h3>Example 01: OButton</h3>
-<potato-button-obutton 
-value="Click Me"
-image="image/img-p.png 21 21"		       
-onclick="alert('I am OButton')"
-></potato-button-obutton>		
+<h3>Example 01: OButton</h3>		
 <P>	
 For example if you want to create a button to set the document title to "I am potato button" you just write the following code in html document:
 </P>
@@ -82,13 +88,7 @@ For example if you want to create a button to set the document title to "I am po
 <p>※You can use the keyword "potato" or just "o" as the [system name] <br>for example < o-button-mybutton /> also will do.
 I call it <b>OButton</b></p>
 
-<h3>Example 02: OKeypad</h3> 
-<potato-keypad-okeypadex 
-value="0"
-left=0px
-top=0px
-htm="htm/keypad.htm"
-></potato-keypad-okeypadex>	
+<h3>Example 02: OKeypad</h3> 	
 <p>Create a text box object with input keypad</p>
 <table>
 <tr>
