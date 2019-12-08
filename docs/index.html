@@ -1,8 +1,20 @@
 ---
 layout: default
 ---
-
+<meta http-equiv="X-UA-Compatible" name="viewport" content="IE=EmulateIE10">
+<meta charset="utf-8">
+<head>
+  <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
+  <link rel="stylesheet" href="../../potato.js/css/jquery-ui.css"/>
+  <link rel="stylesheet" href="../../potato.js/css/potato.css"/>
+  <script type="text/javascript" src="../../potato.js/js/Chart.bundle.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/Chart.utils.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/potato.1.1.0.js"></script>	
+</head>
 <div id="potatohtml"></div>
 <script>
-document.getElementById("potatohtml").innerHTML='<object type="text/html" data="../../project/index.html" ></object>';	
+//document.getElementById("potatohtml").innerHTML='<object type="text/html" data="../../project/index.html" ></object>';	
+  $("potatohtml").load("../../project/index.html")
 </script>	
