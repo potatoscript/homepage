@@ -58,7 +58,37 @@ The objects of potato.js:<br>
 	  ></potato-calendar-ocalendar>
 	 <p style="background:transparent;border:0px;">＜potato-calendar-dateid/＞</p>
 	<li>chart　 - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OChart">OChart</a></li>  
-	<li>keypad　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a></li>
+		
+	  <potato-chart-mybar
+      		data='[
+        		["Menu1","1","3","4"],
+        		["Menu2","2","5","7"],
+        		["Menu3","3","1","4"],
+        		["Menu4","5","7","12"]
+      		]'
+          	border="0px solid black"
+          	chartType=Bar
+          	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+          	dataLabel2="3"
+		dataLabel="Protein, Fat"
+          	labelFontSize=18
+          	label2FontSize=18
+          	legendDisplay=true
+		legendPosition="bottom"
+          	pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+          	pointBorderWidth="2,2,2"
+          	pointStyle="rect,rectRot,triangle"
+          	stacked=true
+          	title="my OChart BAR"
+		titleDisplay=true
+          	height=230
+          	width=600
+		xlabelAngle=10
+		yAxesTitle="g"
+		y2AxesTitle="calories"
+	  ></potato-chart-mybar>
+	 <p style="background:transparent;border:0px;">＜potato-chart-chartid/＞</p>
+	 <li>keypad　- <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a></li>
 	   <potato-keypad-okeypad 
               marginTop=-15px					    
 	      value="0"
