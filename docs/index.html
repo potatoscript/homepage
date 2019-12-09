@@ -113,8 +113,8 @@ The objects of potato.js:<br>
 	<p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
 	<li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a></li> 
 	<o-table-mytable
-        width=500
-        height=280
+        width=500px
+        height=300px
         fontSizeTH=18px
         fontSizeTD=20px
         fontColorTD=red
@@ -132,7 +132,7 @@ The objects of potato.js:<br>
         editCol=[1,2,3];
         callback=
           function(newVal,oldVal,targetCol,SelectCol){
-          document.getElementById('remark').innerHTML=oldVal+' <b>→</b> '+newVal;
+          document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
         };
         "
         multipleSelect='
@@ -145,10 +145,11 @@ The objects of potato.js:<br>
             for(var i=0;i<potato.length;i++){
                t+=i+1+". "+potato[i]+"<br>";
             }
-            $("#div_cart").html(t);
+            $("#mytableResult").html(t);
           };
         '
       /></o-table-mytable>
+      <div id="mytableResult"></div>	
 	 <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a></li>
 	  <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
 	  <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
