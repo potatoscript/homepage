@@ -112,7 +112,44 @@ The objects of potato.js:<br>
 	<li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a></li>  
 	<p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
 	<li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a></li> 
-	<li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a></li>
+	<o-table-mytable
+        width=500
+        height=400
+        fontSizeTH=18px
+        fontSizeTD=20px
+        fontColorTD=red
+        header="No,Menu,Image,Calories,Fat"
+        data='[
+          ["1","Potato Pie","<img src=\"../../potato.js/images/Sweet Potato Pie.jpg\" width=\"150px\" height=\"100px\">","183","13"],
+          ["2","Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
+        ]'
+        click=myTableClick()
+        callback=myTableCallback()
+        editCell="
+        width=150px;
+        tool=keypad.htm;
+        indexCol=0;
+        editCol=[1,2,3];
+        callback=
+          function(newVal,oldVal,targetCol,SelectCol){
+          document.getElementById('remark').innerHTML=oldVal+' <b>→</b> '+newVal;
+        };
+        "
+        multipleSelect='
+          mark=〇;
+          indexCol=1;
+          selectCol=0;
+          callback=function(potato){
+            $("#div_cart").html("");
+            var t="";
+            for(var i=0;i<potato.length;i++){
+               t+=i+1+". "+potato[i]+"<br>";
+            }
+            $("#div_cart").html(t);
+          };
+        '
+      /></o-table-mytable>
+	 <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a></li>
 	  <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
 	  <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
 	 <p style="background:transparent;border:0px;">＜potato-text-textid/＞</p>
@@ -171,7 +208,11 @@ I call it <b>OButton</b></p>
   </div>
   <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 90px; height: 90px;" alt="画像に含まれている可能性があるもの:テキスト" 
 	 src="potatoscript-potato.js-setup-youtube.png"><br>	 
-
+  
+  Show you how to setup Apache Web Server and some configuration on the httpd.conf and php.ini<br>
+  to let you use PHP to talk with your server to fetch the database data.	
+	
+	
 <h2> Built With</h2>
 <p style="width:900px">
 potato javascript requires <b>jquery-3.4.1.js</b> or later and <b>jquery-ui.js.</b><br>
