@@ -128,7 +128,16 @@ The objects of potato.js:<br>
         editCell="
 	trigger:click;
         width:150px;
-        tool:htm/keypad.htm;
+        tool:tool:
+<table>
+  <tr>
+    <td><input type='button' class='tool_key_cls_n' value='1' onclick='potato.getKey(1)'></td>
+    <td><input type='button' class='tool_key_cls_n' value='2' onclick='potato.getKey(2)'></td>
+  </tr>
+  <tr>		  
+    <td colspan=2><input type='button' class='tool_key_cls_c' value='close' onclick='potato.closeEditCell()'/></td>
+  </tr>
+</table>;
         indexCol:0;
         editCol:[1,2,3,4];
         callback:
