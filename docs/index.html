@@ -46,10 +46,10 @@ Webアプリケーションを作成するのJavaScriptです。<br>
 <img class="spotlight" aria-busy="false" style="width: 900px; height: 50px;" alt="potato" src="potato-syntax.gif"><br>	
 
 <P>
-The objects of potato.js:<br>	
+<h3>Potato's Objects:</h3>	
  <ul style="margin-left:50px">
 	<li>■ button - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OButton">OButton</a>
-	 	＜potato-button-id＞＜/potato-button-id＞
+	 	＜o-button-id＞＜/o-button-id＞
 	 </li>
 	   <potato-button-obutton 		  
 		marginTop=-15px		  
@@ -57,14 +57,16 @@ The objects of potato.js:<br>
 	        image="image/img-p.png 21 21"		       
 	        onclick="alert('I am OButton')"
 	      ></potato-button-obutton>
-	<li>■ calendar - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OCalendar">OCalendar</a></li>
+	<li>■ calendar - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OCalendar">OCalendar</a>
+	 ＜o-calendar-dateid＞＜/o-calendar-dateid＞
+	 </li>
 	  <potato-calendar-ocalendar 		     
 		marginTop=-15px
 		value=potato.today()		     
 	  ></potato-calendar-ocalendar>
-	 <p style="background:transparent;border:0px;">＜potato-calendar-dateid/＞</p>
-	<li>■ chart - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OChart">OChart</a></li>  
-		
+	<li>■ chart - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OChart">OChart</a>
+	 ＜o-chart-chartid＞＜/o-chart-chartid＞
+	 </li>  
 	  <potato-chart-mybar
       		data='[
         		["Menu1","1","3","4"],
@@ -94,8 +96,9 @@ The objects of potato.js:<br>
 		y2AxesTitle="calories"
 		click='return alert(potato.chartYvalue)'	      
 	  ></potato-chart-mybar>
-	 <p style="background:transparent;border:0px;">＜potato-chart-chartid/＞</p>
-	 <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a></li>
+	 <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
+	 ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
+	 </li>
 	   <potato-keypad-okeypad 
               marginTop=-15px					    
 	      value="0"
@@ -103,8 +106,9 @@ The objects of potato.js:<br>
 	      left=-150px			    
 	      htm="htm/keypad.htm"
 	   ></potato-keypad-okeypad>
-	 <p style="background:transparent;border:0px;">＜potato-keypad-keypadid/＞</p>
-	<li>■ list - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OList">OList</a></li> 
+	<li>■ list - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OList">OList</a>
+	 ＜o-list-listid＞＜/o-list-listid＞
+	 </li> 
 	 <potato-list-olist
 	   marginTop=-15px
 	   width=180px		    
@@ -114,10 +118,12 @@ The objects of potato.js:<br>
           ["Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
         ]'	    
 	 ></potato-list-olist>
-	 <p style="background:transparent;border:0px;">＜potato-list-listid/＞</p>
-	<li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a></li>  
+	<li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a>
+	 </li>  
 	<p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
-	<li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a></li> 
+	<li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a>
+	 ＜o-table-tableid＞＜o-table-tableid＞
+	 </li> 
 	<o-table-mytable
         width=450px
         height=200px
@@ -165,13 +171,13 @@ The objects of potato.js:<br>
           };
         '
       /></o-table-mytable>
-      <p style="background:transparent;border:0px;">＜potato-table-tableid/＞</p>
 	<div id="mytableResult"></div>	
       <br>	
-	 <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a></li>
+	 <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a>
+		 ＜potato-text-textid＞＜/potato-text-textid＞
+	</li>
 	  <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
 	  <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
-	 <p style="background:transparent;border:0px;">＜potato-text-textid/＞</p>
   </ul>	
 </P>
 
@@ -231,8 +237,10 @@ I call it <b>OButton</b></p>
   <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 90px; height: 90px;" alt="画像に含まれている可能性があるもの:テキスト" 
 	 src="potatoscript-potato.js-setup-youtube.png"><br>
 <br>	
+
+
 <h2> Built With</h2>
-<p style="width:900px">
+<p style="width:700px">
 potato javascript requires <b>jquery-3.4.1.js</b> or later and <b>jquery-ui.js.</b><br>
 <a target="_blank" href="https://jquery.com/download/">https://jquery.com/download/</a> or <br> 
 <a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a>
