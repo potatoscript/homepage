@@ -189,7 +189,7 @@ Webアプリケーションを作成するのJavaScriptです。<br>
 
 <h3>Example 01: OButton</h3>		
 <P>	
-For example if you want to create a button to set the document title to "I am potato button" you just write the following code in html document:
+Create a button to set the document title to "I am potato button" you just write the following code in html document:
 </P>
 <table>
 <tr>
@@ -203,7 +203,24 @@ For example if you want to create a button to set the document title to "I am po
 <p>※You can use the keyword "potato" or just "o" as the [system name] <br>for example < o-button-mybutton /> also will do.
 I call it <b>OButton</b></p>
 
-<h3>Example 02: OKeypad</h3> 	
+<h3>Example 02: OButton with toggle event</h3>
+<p>Create a toggle button</p>
+<table><tr><td>
+<o-button-mybutton
+ng-model=selectedCar
+value="click me"
+toggle="alert(potato.toggle['mybutton']);"
+></o-button-mybutton>
+</td>	
+<td>
+<o-button-mybutton
+ng-model=selectedCar
+value="click me"
+toggle="alert(potato.toggle['mybutton']);"
+></o-button-mybutton>	
+</td></tr></table><br>	
+
+<h3>Example 03: OKeypad</h3> 	
 <p>Create a text box object with input keypad</p>
 <table>
 <tr>
@@ -215,7 +232,7 @@ I call it <b>OButton</b></p>
 </tr>
 </table>
 
-<p>Example 3: Create a bar Chart object (i.e. <b>OChart</b>)
+<p>Example 4: Create a bar Chart object (i.e. <b>OChart</b>)
 <table style="width:1000px">
 <tr>
 <td><img class="spotlight" aria-busy="true" style="width: 610px; height: 510px;" alt="画像に含まれている可能性があるもの:テキスト" 
@@ -237,6 +254,7 @@ I call it <b>OButton</b></p>
   <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 90px; height: 90px;" alt="画像に含まれている可能性があるもの:テキスト" 
 	 src="potatoscript-potato.js-setup-youtube.png"><br>
 <br>	
+<div></div>
 
 
 <h2> Built With</h2>
