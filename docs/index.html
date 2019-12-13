@@ -206,15 +206,28 @@ I call it <b>OButton</b></p>
 <h3>Example 02: OButton with toggle event</h3>
 <p>Create a toggle button</p>
 <table><tr><td style="text-align:left">
-＜o-button-myobutton<br>
+＜o-button-mybutton<br>
    value  = " toggle me "<br>
-   toggle = " alert(potato.toggle['myobutton']); "<br>
->＜/o-button-myobutton><br>
+toggle="<br>
+	if(potato.toggle['mybutton']=='on')<br>
+	document.getElementById('mybutton').innerText='toggle on';<br>
+	else<br>
+	document.getElementById('mybutton').innerText='toggle off';<br>				  
+	alert(potato.toggle['mybutton']);
+"
+	<br>
+＞＜/o-button-mybutton＞<br>
 </td>	
 <td>
 <o-button-mybutton
 value="click me"
-toggle="alert(potato.toggle['mybutton']);"
+toggle="
+	if(potato.toggle['mybutton']=='on')
+	document.getElementById('mybutton').innerText='toggle on';
+	else
+	document.getElementById('mybutton').innerText='toggle off';				  
+	alert(potato.toggle['mybutton']);
+"
 ></o-button-mybutton>	
 </td></tr></table><br>	
 
@@ -243,14 +256,12 @@ toggle="alert(potato.toggle['mybutton']);"
 
 <h2> Installing</h2>
 <p style="width:700px">
-  <div style="float:left;width:350px">
     ■ Step by step <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/2.-Setup">setup Apache Web Server</a><br> 
       and editing on the httpd.conf and php.ini to let PHP talk with Apache for fetching data from database.<br>
     ■ Download the relevant libraries from <a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a><br>
       and include them inside your html file<br>	  
-  </div>
-  <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 90px; height: 90px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="potatoscript-potato.js-setup-youtube.png"><br>
+  <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="potatoscript-potato.js-setup-youtube.png"><br><br>
 </p>
 
 
