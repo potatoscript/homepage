@@ -204,13 +204,13 @@ toggle="<br>
 	document.getElementById('mybutton').innerText='toggle on';<br>
 	else<br>
 	document.getElementById('mybutton').innerText='toggle off';<br>				  
-	$('#toggleoutput').html(potato.toggle['mybutton']);
+	$('#toggleoutput').html('The button was toggled '+potato.toggle['mybutton']);
 "
 	<br>
 ＞＜/o-button-mybutton＞<br>
 ＜div id="toggleoutput"＞＜/div＞<br>		
 </td>	
-<td>
+<td style="vertical-align:top;padding-top:10px">
 <o-button-mybutton
 value="click me"
 toggle="
@@ -218,7 +218,7 @@ toggle="
 	document.getElementById('mybutton').innerText='toggle on';
 	else
 	document.getElementById('mybutton').innerText='toggle off';				  
-	$('#toggleoutput').html(potato.toggle['mybutton']);
+	$('#toggleoutput').html('The button was toggled '+potato.toggle['mybutton']);
 "
 ></o-button-mybutton>	
 <div id="toggleoutput"></div>	
