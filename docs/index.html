@@ -198,30 +198,32 @@ I call it <b>OButton</b></p>
 <p>Create a toggle button</p>
 <table><tr><td style="font-size:15px;text-align:left">
 ＜o-button-mybutton<br>
-   value  = " toggle me "<br>
-toggle="<br>
-	if(potato.toggle['mybutton']=='on')<br>
-	document.getElementById('mybutton').innerText='toggle on';<br>
-	else<br>
-	document.getElementById('mybutton').innerText='toggle off';<br>				  
-	$('#toggleoutput').html('The button was toggled '+potato.toggle['mybutton']);
-"
-	<br>
-＞＜/o-button-mybutton＞<br>
-＜div id="toggleoutput"＞＜/div＞<br>		
+<span class="tab2">value  = " toggle me "<br>
+<span class="tab2">toggle="<br>
+<span class="tab4">if(potato.toggle['mybutton']=='on'){
+<span class="tab6">document.getElementById('mybutton').innerText='toggle on';
+<span class="tab6">document.getElementById('lightbulb').src="image/lightbulbon.gif";
+<span class="tab4">}else{
+<span class="tab6">document.getElementById('mybutton').innerText='toggle off';
+<span class="tab6">document.getElementById('lightbulb').src="image/lightbulboff.gif";								 
+<span class="tab4">}
+"<br>
+＞＜/o-button-mybutton＞<br>		
 </td>	
 <td style="width:250px;vertical-align:top;padding-top:10px">
 <o-button-mybutton
 value="click me"
 toggle="
-	if(potato.toggle['mybutton']=='on')
-	document.getElementById('mybutton').innerText='toggle on';
-	else
-	document.getElementById('mybutton').innerText='toggle off';				  
-	$('#toggleoutput').html('The button was toggled '+potato.toggle['mybutton']);
+	if(potato.toggle['mybutton']=='on'){
+		document.getElementById('mybutton').innerText='toggle on';
+		document.getElementById('lightbulb').src="image/lightbulbon.gif";
+	}else{
+		document.getElementById('mybutton').innerText='toggle off';
+		document.getElementById('lightbulb').src="image/lightbulboff.gif";								 
+	}
 "
 ></o-button-mybutton>	
-<div style="font-size:13px" id="toggleoutput"></div>	
+<img id="lightbulb" src="image/lightbulboff.gif" style="width:100px;height:150px"/>	
 </td></tr></table><br>	
 
 <h3>Example 03: OKeypad</h3> 	
