@@ -204,10 +204,11 @@ toggle="<br>
 	document.getElementById('mybutton').innerText='toggle on';<br>
 	else<br>
 	document.getElementById('mybutton').innerText='toggle off';<br>				  
-	alert(potato.toggle['mybutton']);
+	$('#toggleoutput').html(potato.toggle['mybutton']);
 "
 	<br>
 ＞＜/o-button-mybutton＞<br>
+＜div id="toggleoutput"＞＜/div＞<br>		
 </td>	
 <td>
 <o-button-mybutton
@@ -217,7 +218,7 @@ toggle="
 	document.getElementById('mybutton').innerText='toggle on';
 	else
 	document.getElementById('mybutton').innerText='toggle off';				  
-	$("#toggleoutput").html(potato.toggle['mybutton']);
+	$('#toggleoutput').html(potato.toggle['mybutton']);
 "
 ></o-button-mybutton>	
 <div id="toggleoutput"></div>	
