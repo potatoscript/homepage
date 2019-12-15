@@ -279,7 +279,10 @@ toggle="
 	2. Potato JavaScript <a target="_blank" href="https://www.youtube.com/channel/UCSvc1mfBihTH_qfkAs7Iy4g">Tutorials</a>.
   </div>
   <img class="spotlight" aria-busy="true" style="width: 100px; height: 30px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="youtube.png"><br>	
+	 src="youtube.png">
+  <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="image/potatoyoutube.png">
+  <br>	
 
   <ul style="margin-left:50px">
 	<li>Potato.JavaScript Tutorial 001 - <a target="_blank" href="https://youtu.be/XrzNLFtjt8M">Potato.js Introduction</a></li>
@@ -296,7 +299,7 @@ toggle="
 
 <h2> Authors 著者</h2>
 <p style="width:900px">
-I am <b>BRUCE LIM.K.S. (林 建成)</b> the author from SARAWAK and live in JAPAN since 2004, <br>
+I am <b id="bruce">BRUCE LIM.K.S. (林 建成)</b> the author from SARAWAK and live in JAPAN since 2004, <br>
 I graduated from engineering background (Mechanical Engineering at Coventry University UK),<br> 
 but my final year's undergraduate project had led me to the world of programming.<br>
 (Developing software to find the natural frequency and damping factor from the input data<br> 
@@ -307,6 +310,9 @@ The result was good and encouraged me continue to develop my programming skill u
 This is my first JavaScript Library, which was developed since year 2010. <br>
 I call it <b>potato javascript</b> or <b>o</b> script (o = potato, why because its as simple as potato)
 </p>
+<div id="div_bruce" style="display:none"><img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="bruce lim" 
+	 src="image/bruce.png"></div>
+
 
 <h2> Support & Contact 連絡先</h2>
 <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="potatoscript" src="image/myemail.png"><br>
@@ -317,4 +323,16 @@ potato.js is licensed under the terms of the GNU General Public License v3.0.
 <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="画像に含まれている可能性があるもの:テキスト" 
 	 src="image/potato.js license.png"><br>
 </div>
+
+
+<script>
+   $("#bruce")
+   .mouseenter(function(){
+      $("#div_bruce").show();
+   })
+   .mouseout(function(){
+      $("#div_bruce").hide();	   
+   })
+</script>	
+
 
