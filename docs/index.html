@@ -126,6 +126,11 @@ Webアプリケーションを作成するのJavaScriptです。<br>
 	try to drag and drop me	
 	 </li> 
 	<o-table-mytable
+	dragdrop='
+		  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+		  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+		  document.getElementById("mytableResult").innerHTML=t;
+		  '		 
         width=650px
         height=200px
         fontSizeTH=18px
