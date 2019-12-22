@@ -12,7 +12,7 @@ layout: default
   <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
   <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/potato.1.2.2.js"></script>	
+  <script type="text/javascript" src="../../potato.js/js/potato.1.3.0.js"></script>	
 </head>
 
 <div style="font-size:18px;font-family:Tempus Sans ITC">
@@ -68,17 +68,28 @@ Webアプリケーションを作成するのJavaScriptです。<br>
 	 ＜o-chart-chartid＞＜/o-chart-chartid＞
 	 </li>  
 	  <potato-chart-mybar
-      		data='[
-        		["Menu1","1","3","4"],
-        		["Menu2","2","5","7"],
-        		["Menu3","3","1","4"],
-        		["Menu4","5","7","12"]
-      		]'
-          	border="0px solid black"
-          	chartType=Bar
-          	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
-          	dataLabel2="3"
-		dataLabel="Protein, Fat"
+    chartType=Bar
+    stacked=true
+    dat='[
+  		["2","1","3","4"],
+  		["","2","5","7"],
+  		["Menu3","3","1","4"],
+  		["Menu4","5","7","12"]
+		]'
+    data='
+	  "[{"0":"0","1":"1","2":"3","calories":"4"},{"0":"1","1":"2","2":"5","calories":"8"},{"0":"3","1":"3","2":"1","calories":"7"},{"0":"2","1":"5","2":"7","calories":"14"}]"
+	  
+	  '			      
+    	border="0px solid black"
+
+    	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+
+    xLabelData=menu1,menu2,menu3,menu4
+    xLabelAngle=10
+		yAxesLabel="g"
+		y2AxesLabel="calories"
+    data2Label="calories"
+    dataLabel="Protein,Fat,Sugar"
           	labelFontSize=18
           	label2FontSize=18
           	legendDisplay=true
@@ -86,15 +97,13 @@ Webアプリケーションを作成するのJavaScriptです。<br>
           	pointBorderColorIndex="red,blue,yellow,orange,green,grey"
           	pointBorderWidth="2,2,2"
           	pointStyle="rect,rectRot,triangle"
-          	stacked=true
+
           	title="my OChart BAR"
 		titleDisplay=true
-          	height=230
-          	width=400
-		xlabelAngle=10
-		yAxesTitle="g"
-		y2AxesTitle="calories"
-		click='return alert(potato.chartYvalue)'	      
+          	height=330px
+          	width=500px
+
+		click='return alert(potato.chartYvalue)'
 	  ></potato-chart-mybar>
 	 <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
 	 ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
