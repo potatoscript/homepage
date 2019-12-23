@@ -344,12 +344,22 @@ potato.js is licensed under the terms of the GNU General Public License v3.0.<br
 	 src="image/potato.js license.png"><br>
 </div>
 
-<iframe src="cat.mp3" allow="autoplay" id="audio" style="display:none"></iframe>	
-<audio id="player" autoplay loop>
+<iframe src="cat.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 	
+<audio id="player" controls autoplay loop>
     <source src="cat.mp3" type="audio/mp3">
 </audio>	
 
 <script>
+	
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+  }	
+	
    $("#bruce")
    .css("cursor","pointer")
    .mouseenter(function(){
