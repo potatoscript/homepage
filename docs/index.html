@@ -12,7 +12,7 @@ layout: default
   <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
   <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/potato.1.3.0.js"></script>	
+  <script type="text/javascript" src="../../potato.js/js/potato.1.4.0.js"></script>	
 </head>
 
 <div style="font-size:18px;font-family:Tempus Sans ITC">
@@ -182,6 +182,31 @@ Webアプリケーションを作成するのJavaScriptです。<br>
 	</li>
 	  <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
 	  <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
+	
+	<br>	
+	 <li>■ tab - <a>OTab</a>
+		 ＜potato-tab-tabid /＞
+	</li>
+	<o-tab-mytab
+	    header = 'OButton || OText Box || OMenu'
+	    body = '
+		<potato-button-mybtn1></potato-button-mybtn1>
+		<potato-button-mybtn2></potato-button-mybtn2>
+		<potato-button-mybtn3></potato-button-mybtn3>
+		||
+		<potato-text-mytext value="test"/>
+		||
+		menu content go over here.....
+	    '
+	    background=lightblue
+	    color=blue
+	    tabHeight=25px
+	    tabWidth=110px
+	    fontSize=18px
+	    speed=1000
+	    marginTop=10px
+	  ></o-tab-mytab>
+	
   </ul>	
 </P>
 
