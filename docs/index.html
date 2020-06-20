@@ -431,10 +431,10 @@ potato.js is licensed under the terms of the GNU General Public License v3.0.<br
 	.mouseover(
 	  function(){
 	    var $this = $(this);
-	    if($this.height()<100){
+	   
 	    $.expand($this,80,80);
-	    $this.style.zIndex=1000;    
-	}
+	    $this.css("zIndex",1000);    
+	
 	})
 	.mouseleave(function(){
 	var $this = $(this);
