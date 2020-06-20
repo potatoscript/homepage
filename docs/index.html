@@ -19,52 +19,52 @@ layout: default
 <div style="font-size:18px;font-family:Arial">
 <div>	
 <div class="flipPotato">
-	<div class="back">
+	<div class="back flipItem">
 		<img class="spotlight" aria-busy="true" style="width: 60px; height: 60px;" alt="画像に含まれている可能性があるもの:テキスト" 
      src="potato.jpg"> 
 	</div>
-	<div class="front">P</div>
+	<div class="front flipItem">P</div>
 </div>
 <div class="flipPotato">
-	<div class="back">
+	<div class="back flipItem">
 		<img class="spotlight" aria-busy="true" style="width: 60px; height: 60px;" alt="画像に含まれている可能性があるもの:テキスト" 
      src="Baked Potatoes.jpg"> 
 	</div>
-	<div class="front">O</div>
+	<div class="front flipItem">O</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">
+	<div class="back flipItem">
 		<img class="spotlight" aria-busy="true" style="width: 60px; height: 60px;" alt="画像に含まれている可能性があるもの:テキスト" 
      src="Croquettes.jpg"> 
 	</div>
-	<div class="front">T</div>
+	<div class="front flipItem">T</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">.</div>
-	<div class="front">A</div>
+	<div class="back flipItem">.</div>
+	<div class="front flipItem">A</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">K</div>
-	<div class="front">T</div>
+	<div class="back flipItem">K</div>
+	<div class="front flipItem">T</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">.</div>
-	<div class="front">O</div>
+	<div class="back flipItem">.</div>
+	<div class="front flipItem">O</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">S</div>
-	<div class="front">.</div>
+	<div class="back flipItem">S</div>
+	<div class="front flipItem">.</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">.</div>
-	<div class="front">J</div>
+	<div class="back flipItem">.</div>
+	<div class="front flipItem">J</div>
 </div>	
 <div class="flipPotato">
-	<div class="back">
+	<div class="back flipItem">
 	  <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
      src="potatoscript-potato.js.png"> 
 	</div>
-	<div class="front">S</div>
+	<div class="front flipItem">S</div>
 </div>	
 </div>	
 
@@ -427,12 +427,12 @@ potato.js is licensed under the terms of the GNU General Public License v3.0.<br
 
 <script>
 	
-   $('.flipPotato')
+   $('.flipItem')
 	.mouseover(
 	  function(){
 	    var $this = $(this);
 	    if($this.height()<100){
-	    $.expand($this,150,150);
+	    $.expand($this,80,80);
 	}
 	})
 	.mouseleave(function(){
