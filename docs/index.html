@@ -14,6 +14,19 @@ layout: default
   <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
   <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
   <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>	
+  <script>
+	  $('.flipPotato').click(
+	      function(){
+		var $this = $(this);
+		if($this.height()<100){
+		  $.expand($this,1100,370);
+		}
+	      })
+	      .mouseleave(function(){
+		var $this = $(this);
+		$.collapse($this,P.itemWidth,60);
+	      });
+  </script>	
 </head>
 
 <div style="font-size:18px;font-family:Arial">
