@@ -437,8 +437,9 @@ potato.js is licensed under the terms of the GNU General Public License v3.0.<br
 	
 	})
 	.mouseleave(function(){
-	var $this = $(this);
-	$.collapse($this,50,50);
+	  var $this = $(this);
+	  $.collapse($this,50,50);
+	  $this.css("zIndex",900);  
 	});		
 	
    $("#bruce")
