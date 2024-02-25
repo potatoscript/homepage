@@ -117,14 +117,14 @@ $( document ).ready(function() {
 
 	$(".box-wrapper-menu").css({
 		"width":760+"px",
-		"height":1600+"px"
+		"height":2600+"px"
    });
    $("#table-skill").css({
 		"width":750+"px"
    });
    $(".content-box-menu,.col-one-menu col").css({
 		"width":750+"px",
-		"height":1590+"px",
+		"height":2590+"px",
 		"overflow":"auto"
    });
 
