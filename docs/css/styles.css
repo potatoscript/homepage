@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+p {
+    color: #666;
+    font-size: 16px;
+}
+.code-example {
+    font-family: monospace;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.spotlight {
+    width: 400px;
+    height: 30px;
+}
+
+
+.flipPotato{
+    width:60px;
+    height:60px;
+    text-align:center;
+    vertical-align:center;
+    font-size:35px;
+    float:left;
+    cursor:pointer;	
+    margin-left:15px;
+  }
+  .flipPotato > .front{
+    position:absolute;
+    transform: perspective(600px) rotateY(0deg);
+    background:rgb(201, 192, 155);
+    width:50px;
+    height:50px;
+    backface-visibility:hidden;
+    transition: transform .5s linear 0s;
+    padding:10px;		
+    border:1px solid black;	
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.5);	
+  }	
+  .flipPotato > .frontOther{
+    position:absolute;
+    transform: perspective(600px) rotateY(0deg);
+    background:#FFFFFF;
+    width:50px;
+    height:50px;
+    backface-visibility:hidden;
+    transition: transform .5s linear 0s;
+    padding:10px;		
+    border:1px solid black;	
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+  }
+  .flipPotato > .back{
+    position:absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background:#FFFFFF;
+    width:50px;
+    height:50px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    padding:10px;		
+    border:1px solid black;	
+    border-radius:10px;	
+    box-shadow:0 0 10px rgba(0,0,0,.5);	
+  }	
+  .flipPotato:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  .flipPotato:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+  }
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 220px;
+    margin:10px;
+    border: 0px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    border-radius:20px;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    border: 1px solid black;
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    border-radius:20px;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    border: 1px solid black;
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+#popupModal .modal-dialog {
+    margin-left: 10%; /* Adjust the margin-left as needed */
+}
+
+#popupModal .modal-body {
+    font-size: 18px; /* Adjust the font size as needed */
+    max-width: 100%; /* Adjust the width as needed */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    margin: 0 auto; /* Center the content horizontally */
+    height: fit-content;
+}
+#popupModal .modal-content {
+    font-size: 18px; /* Adjust the font size as needed */
+    width: 1200px; /* Adjust the width as needed */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    margin-top: 10px; /* Center the content horizontally */
+    height: 800px;
+}
+
+#popupModal .modal-body .modal-content table {
+    font-size: 15px !important;
+    color: black !important;
+}
+
+#delivery_data_table td {
+    font-size: 15px !important;
+    font-weight: bold;
+    color: black !important;
+    text-align: center;
+}
+#delivery_data_table th {
+    font-size: 15px !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+#vos_data_table td {
+    font-size: 15px !important;
+    font-weight: bold;
+    color: black !important;
+    text-align: center;
+}
+#vos_data_table th {
+    font-size: 15px !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+#logTableContainer, #logTableContainerMCO{
+    overflow-x: auto;
+    max-height: 73vh; /* Set a maximum height for the table container if needed */
+}
+#deliveryTableContainer, #vosTableContainer{
+    overflow-x: auto;
+    max-height: 60vh; /* Set a maximum height for the table container if needed */
+}
+#delivery_data_table thead th, #log_data_table thead th, #log_data_table_MCO thead th, #vos_data_table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #343a40; /* Adjust background color as needed */
+    z-index: 999; /* Ensure header stays on top of other content */
+}
+.inline-divs {
+    display: inline-block;
+    vertical-align: top; /* Align the divs to the top */
+}
+
+.inline-divs {
+    display: inline-block !important;
+    vertical-align: top !important; /* Align the divs to the top */
+}
+
+.tmap-link{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important; 
+    border-bottom-color: transparent !important; 
+    margin-right: 10px;
+    width: 160px;
+}
+.tmap-link.active  {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border: 2px solid #007bff !important; 
+    border-bottom-color: transparent !important; 
+}

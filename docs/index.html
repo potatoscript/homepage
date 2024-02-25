@@ -4,15 +4,12 @@
 <html>
 <head>
   <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
-  <link rel="stylesheet" href="../../potato.js/css/jquery-ui.css"/>
-  <link rel="stylesheet" href="../../potato.js/css/potato.css"/>
-  <script type="text/javascript" src="../../potato.js/js/Chart.bundle.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/Chart.utils.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
-  <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>		
+  <link rel="stylesheet" href="css/jquery-ui.css"/>
+  <link rel="stylesheet" href="css/potato.css"/>
+  <link rel="stylesheet" href="css/styleS.css"/>
+  <script type="text/javascript" src="js/potato.1.6.0.js"></script>	
+  <script type="text/javascript" src="js/script.js"></script>	
+
 </head>
 <body style="font-family:Arial;margin-left:20px;font-size:15px;background:#EDF1F4">
 
@@ -56,7 +53,7 @@
 </div>	
 <div class="flipPotato">
 	<div class="back flipItem">S</div>
-	<div class="front flipItem">.</div>
+	<div class="frontOther flipItem">.</div>
 </div>	
 <div class="flipPotato">
 	<div class="back flipItem">.</div>
@@ -74,86 +71,176 @@
 <br>
 <br>	
 <p style="margin-top:20px">	
-The JavaScript Library that turn complicated code into something more restful.<br>
-<P>potato javascript is the another way of coding the web application.<br> 
-It extend the HTML code with custom tag and integrated with other library like ChartJS, JQueryJS and AngularJS.<br>
-You code your objects like button, pulldown list, text box, table, menu, chart and so on<br>
-via providing the relevant attribute name and value inside a HTML tag (fill in a blank),<br> 
-which let you write less code and keep code simple to save your time on building thing.</P>
-<P>It is easy to learn, use and master.</P>
-For those people who code with AngularJS, can ng-code inside the potatoJS tag as well, <br>
-For example you can put ng-model inside the tag and bind to other object with ｛｛data｝｝		
+	The JavaScript library that turns complicated code into something more restful.<br>
+	<p>Potato JavaScript is another way of coding for web applications.<br> 
+	It extends HTML code with custom tags and integrates with other libraries like Chart.js, jQuery, and AngularJS.<br>
+	You can create objects such as buttons, dropdown lists, text boxes, tables, menus, charts, and more<br>
+	by providing the relevant attribute name and value inside an HTML tag, which allows you to write less code and keep it simple, saving time when building things.</p>
+	<p>It is easy to learn, use, and master.</p>
+	For those who code with AngularJS, they can use ng-code inside the PotatoJS tag as well. <br>
+	For example, you can put ng-model inside the tag and bind it to other objects using {{data}}.		
 </p>
 <br>	
 <p>	
-複雑なコードをより楽しいものに変えるのJavaScriptライブラリです。<br>
-ジャガイモJavaScriptは、カスタムタグでHTMLコードを拡張して、<br>
-Webアプリケーションを作成するのJavaScriptです。<br>
-関連するコードを1つの場所（htmlタグ）にグループ化して、コードの管理<br>
-をはるかに容易にし、コードの記述を減らしてコードをシンプルに保ち、アプリケーションの構築時間を節約します。<br>
-習得、使用、習得が簡単です。
+複雑なコードをよりシンプルなものに変えるJavaScriptライブラリです。<br>
+ポテトJavaScriptは、Webアプリケーションのコーディングの別の方法です。<br>
+カスタムタグを使用してHTMLコードを拡張し、Chart.js、jQuery、AngularJSなどの他のライブラリと統合します。<br>
+HTMLタグ内に関連する属性名と値を指定することで、ボタン、ドロップダウンリスト、テキストボックス、テーブル、メニュー、チャートなどのオブジェクトを作成でき、<br>
+コードを少なくしてシンプルに保ち、物事を構築する際に時間を節約できます。</p>
+<p>習得、使用、マスターするのが簡単です。</p>
+AngularJSでコーディングする人々にとっては、PotatoJSタグ内でもng-codeを使用できます。<br>
+例えば、タグ内にng-modelを置いて、{{data}}を使って他のオブジェクトにバインドすることができます。		
 </P>	
-<h2> Getting Started 入門</h2>
-<P>The basic syntax of the code is looked like this:</P>
-<P>コードの基本的な構文は次のようになります。</P>	
-<img class="spotlight" aria-busy="false" style="width: 400px; height: 30px;" alt="potato" src="potato-syntax.gif"><br>	
-<br>
+<section>
+	<p>The basic syntax of the code looks like this:</p>
+	<p>コードの基本的な構文は次のようになります。</p>
+	<div class="code-example">
+		&lt;[system name]-[object type]-[object id] [attribute1 attribute2...] /&gt;<br>
+		<img src="potato-syntax.gif" alt="potato" class="spotlight" aria-busy="false">
+	</div>
+</section>
+
 <P>
-<h3>Potato's Objects:</h3>	
- <ul style="margin-left:50px">
-	<li>■ button - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OButton">OButton</a>
-	 	＜o-button-id＞＜/o-button-id＞
+<h3>◎ Potato's Objects: <span style="font-size: 13px;"> (各オブジェクトコードの基本的な構文)</span>	</h3>
+<ul style=" list-style-type: none;">
+	<li><h3 style="color: green;">■ POTATO-BUTTON</h3>
+		<section>
+			<div class="code-example">
+				<table>
+					<tr>
+						<td style="vertical-align: top;">
+							<potato-button-obutton 		  
+								marginTop="10px"
+								background="yellow"		  
+								value="Click Me"
+								image="image/img-p.png 21 21"		       
+								onclick="alert('I am OButton')"
+							></potato-button-obutton>
+						</td>
+						<td style="vertical-align: top;">
+							<p style="margin-left: 30;color: green;">&lt;potato-button-buttonID </p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="Click Me" </p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">background</font>="yellow"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>="10px"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">image</font>="image/img-p.png 21 21"</p> 
+								<p style="margin-left: 50px;color:blue"><font style="color: red;">onclick</font>="alert('I am OButton')"</p>
+							<p style="margin-left: 30px;color: green;">/potato-button-buttonID&gt;</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
 	 </li>
-	   <potato-button-obutton 		  
-		marginTop=-15px		  
-                value="Click Me"
-	        image="image/img-p.png 21 21"		       
-	        onclick="alert('I am OButton')"
-	      ></potato-button-obutton>
-	<li>■ calendar - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OCalendar">OCalendar</a>
-	 ＜o-calendar-dateid＞＜/o-calendar-dateid＞
+	 <br>
+	 <li><h3 style="color: green;">■ POTATO-CALENDAR</h3>
+		<section>
+			<div class="code-example">
+				<table>
+					<tr>
+						<td style="vertical-align: top;">
+							<potato-calendar-ocalendar 		  
+								marginTop=-15px
+								value=potato.today()	
+							></potato-calendar-ocalendar>
+						</td>
+						<td style="vertical-align: top;">
+							<p style="margin-left: 30;color: green;">&lt;potato-calendar-calendarID </p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>="-15px" </p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="potato.today()" </p>
+							<p style="margin-left: 30px;color: green;">/potato-calendar-calendarID&gt;</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
 	 </li>
-	  <potato-calendar-ocalendar 		     
-		marginTop=-15px
-		value=potato.today()		     
-	  ></potato-calendar-ocalendar>
-	<li>■ chart - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OChart">OChart</a>
-	 ＜o-chart-chartid＞＜/o-chart-chartid＞
-	 </li>  
-	  <potato-chart-mybar
-    chartType=Bar
-    stacked=true
-    data='[
-		["Menu1","1","3","4","8"],
-		["Menu2","2","5","7","14"],
-		["Menu3","3","1","4","8"],
-		["Menu4","5","7","12","24"]
-	]'		      
-    	border="0px solid black"
+	 <br>
+	 <li><h3 style="color: green;">■ POTATO-CHART</h3>
+		<section>
+			<div class="code-example">
+				<table>
+					<tr>
+						<td style="vertical-align: top;">
+							<potato-chart-chartRadar 		  
+								chartType="radar"
+								title="Potato Chart Radar"
+								titleDisplay=true
+								height=330px
+								width=500px
+								data=" [70, 60, 70, 70, 70]"
+								label= "日本語 (日常会話レベル N2)"
+								xLabelData=menu1,menu2,menu3,menu4
+							></potato-chart-chartRadar>
+							<potato-chart-chartID 		  
+								chartType="bar"
+								stacked=true
+								data='[
+									["Menu1","1","3","4","8"],
+									["Menu2","2","5","7","14"],
+									["Menu3","3","1","4","8"],
+									["Menu4","5","7","12","24"]
+								]'		      
+								border="0px solid black"
+								colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+								xLabelData=menu1,menu2,menu3,menu4
+								xLabelAngle=10
+								yAxesLabel="g"
+								y2AxesLabel="calories"
+								data2Label="calories"
+								dataLabel="Protein,Fat,Sugar"
+								labelFontSize=18
+								label2FontSize=18
+								legendDisplay=true
+								legendPosition="bottom"
+								pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+								pointBorderWidth="2,2,2"
+								pointStyle="rect,rectRot,triangle"
+								title="Potato Chart BAR"
+								titleDisplay=true
+								height=330px
+								width=500px
+								click='return alert(potato.chartYvalue)'
+							></potato-chart-chartID>
+						</td>
+						<td style="vertical-align: top;">
+							<p style="margin-left: 30;color: green;">&lt;potato-chart-chartID </p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">chartType</font>=Bar</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">stacked</font>=true</p>
+						    <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+									["Menu1","1","3","4","8"],<br>
+									["Menu2","2","5","7","14"],<br>
+									["Menu3","3","1","4","8"],<br>
+									["Menu4","5","7","12","24"]<br>
+								]'<br>		      
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">border</font>="0px solid black"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">colorIndex</font>="#e3ff7f,#a1a4ff,yellow,orange,green,grey"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelData</font>=menu1,menu2,menu3,menu4</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelAngle</font>=10</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">y2AxesLabel</font>="calories"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">data2Label</font>="calories"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">dataLabel</font>="Protein,Fat,Sugar"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">labelFontSize</font>=18</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">label2FontSize</font>=18</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">legendDisplay</font>=true</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">legendPosition</font>="bottom"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderColorIndex</font>="red,blue,yellow,orange,green,grey"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderWidth</font>="2,2,2"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">pointStyle</font>="rect,rectRot,triangle"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">title</font>="my OChart BAR"</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">titleDisplay</font>=true</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=330px</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=500px</p>
+							<p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>='return alert(potato.chartYvalue)'</p>
+							<p style="margin-left: 30px;color: green;">/potato-chart-chartID&gt;</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	 </li>
+	 <br>
+	   
 
-    	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
-
-    xLabelData=menu1,menu2,menu3,menu4
-    xLabelAngle=10
-		yAxesLabel="g"
-		y2AxesLabel="calories"
-    data2Label="calories"
-    dataLabel="Protein,Fat,Sugar"
-          	labelFontSize=18
-          	label2FontSize=18
-          	legendDisplay=true
-		legendPosition="bottom"
-          	pointBorderColorIndex="red,blue,yellow,orange,green,grey"
-          	pointBorderWidth="2,2,2"
-          	pointStyle="rect,rectRot,triangle"
-
-          	title="my OChart BAR"
-		titleDisplay=true
-          	height=330px
-          	width=500px
-
-		click='return alert(potato.chartYvalue)'
-	  ></potato-chart-mybar>
 	 <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
 	 ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
 	 </li>
