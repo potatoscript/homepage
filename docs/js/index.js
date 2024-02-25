@@ -116,14 +116,14 @@ $( document ).ready(function() {
    var allTabs          = $(".tabs-menu li a");
 
 	$(".box-wrapper-menu").css({
-		"width":960+"px",
+		"width":1960+"px",
 		"height":4600+"px"
    });
    $("#table-skill").css({
-		"width":950+"px"
+		"width":1950+"px"
    });
    $(".content-box-menu,.col-one-menu col").css({
-		"width":950+"px",
+		"width":1950+"px",
 		"height":4590+"px",
 		"overflow":"auto"
    });
@@ -133,7 +133,7 @@ $( document ).ready(function() {
 
 
     $(".tabs-menu li:first-child a, .content-box-menu:first").addClass("current");
-    $(".box-wrapper-menu .current .col").css("top",20+"px");
+    $(".box-wrapper-menu .current .col").css("top",0);
 	$('.col-one-menu').css({
       'top':-9000+'px'
     });
