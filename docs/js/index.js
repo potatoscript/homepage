@@ -135,7 +135,7 @@ $( document ).ready(function() {
     $(".tabs-menu li:first-child a, .content-box-menu:first").addClass("current");
     $(".box-wrapper-menu .current .col").css("top",10+"px");
 	$('.col-one-menu').css({
-      'top':-3000+'px'
+      'top':-4000+'px'
     });
     $(".box-wrapper-menu .current .col-one-menu").css("top",0);
 	
@@ -153,7 +153,7 @@ $( document ).ready(function() {
         speedOne=Math.floor(Math.random()*1000)+500;
         colOne=$(".box-wrapper-menu .current .col-one-menu");
         colOne.animate({
-          "top":-3000+"px"
+          "top":-4000+"px"
         },speedOne);
 
         allContentBoxes.removeClass("current");
@@ -545,21 +545,22 @@ function radarSkill(){
 	};
 	*/
 	var chartOptions = {
-		scale: {
-			ticks: {
-				beginAtZero: true,
-				min: 0,
-				max: 100,
-				stepSize: 10
-			},
-			pointLabels: {
-				fontSize: 12
-			}
+	  scale: {
+		ticks: {
+		  beginAtZero: true,
+		  min: 0,
+		  max: 100,
+		  stepSize: 10
 		},
-		legend: {
-			display: false
-		},
-		responsive: true
+		pointLabels: {
+		  fontSize: 15
+		}
+	  },
+	  legend: {
+		display: false,
+		position: 'left'
+	  },
+	  responsive: true
 	};
 	
 	var radarChart = new Chart(skillChart, {
@@ -567,7 +568,6 @@ function radarSkill(){
 		data: marksData,
 		options: chartOptions
 	});
-	
 
 }
 

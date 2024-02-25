@@ -1,546 +1,823 @@
-
-<meta http-equiv="X-UA-Compatible" name="viewport" content="IE=EmulateIE10">
+<!DOCTYPE html>
+<html lang="en-US">
 <meta charset="utf-8">
-<html>
 <head>
-  <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
+  <link rel="icon" type="images/png" href="images/img-p.png">
   <link rel="stylesheet" href="css/jquery-ui.css"/>
   <link rel="stylesheet" href="css/potato.css"/>
-  <link rel="stylesheet" href="css/styleS.css"/>
-  <script type="text/javascript" src="js/potato.1.6.0.js"></script>	
-  <script type="text/javascript" src="js/script.js"></script>	
+  <link rel="stylesheet" href="css/jquery.orgchart.css"/>
 
+  <link rel="stylesheet" href="css/index.css"/>
+  <script type="text/javascript" src="js/enchant.js"></script>
+  <script type="text/javascript" src="js/Chart.bundle.js"></script>
+  <script type="text/javascript" src="js/Chart.utils.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="js/potato.1.5.0.js"></script>
+  <script type="text/javascript" src="js/chartjs-plugin-labels.js"></script>
+  <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+  <!--<script type="text/javascript" src="jquery.panzoom.js"></script>-->
+  <script type="text/javascript" src="js/index.js"></script>
 </head>
-<body style="font-family:Arial;margin-left:20px;font-size:15px;background:#EDF1F4">
+  <body>
+    <br>
+    <div class="flipPotato">
+        <div class="back flipItem">
+            <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+         src="potato.jpg"> 
+        </div>
+        <div class="front flipItem">P</div>
+    </div>
+    <div class="flipPotato">
+        <div class="back flipItem">
+            <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+         src="Baked Potatoes.jpg"> 
+        </div>
+        <div class="front flipItem">O</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">
+            <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+         src="Croquettes.jpg"> 
+        </div>
+        <div class="front flipItem">T</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">
+            <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+         src="maxresdefault.jpg"> 
+        </div>
+        <div class="front flipItem">A</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">B</div>
+        <div class="front flipItem">T</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">R</div>
+        <div class="front flipItem">O</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">U</div>
+        <div class="frontOther flipItem">.</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">C</div>
+        <div class="front flipItem">J</div>
+    </div>	
+    <div class="flipPotato">
+        <div class="back flipItem">E</div>
+        <div class="front flipItem">S</div>
+    </div>	
+    <br>
+    <br><br>
+	<table style="font-family:arial;margin-left:10px;margin-top:10px">
+		<tr>
+			<td style='vertical-align:top;'>
+				<div id="menu_tabs">
+					<ul class="tabs-menu" >
+						<li><a onclick="hrefClick('one')">
+							🥔.jsの概略
+							</a>
+						</li>
+						<li><a onclick="hrefClick('two')">
+							📚 使用マニュアル
+							</a>
+						</li>
+						<li><a onclick="hrefClick('three')">
+							⚙ 設定
+							</a></li>
+						<!--<li><a onclick="hrefClick('four')">Ｑ＆Ａ</a></li>-->
+					</ul>
+					<div class="box-wrapper-menu">
+						<div id="one" class="content-box-menu">
+							<div class="col-one-menu col">
+								<ul id="myUL">
+									<li><span id="caret-basic" class="caret2">What is Potato.js</span>
+										<ul class="active" >
+                                            <p id="txtOnCreate">
+                                            <script>
+                                                var i = 0;
+                                                var speed = 30;
+                                                var txt = `
+                                                JavaScriptライブラリは、複雑なコードをよりリラックスしたものに変えます。
+                                                Potato.jsは、Webアプリケーションの別のコーディング方法です。
+                                                それはカスタムタグでHTMLコードを拡張します。
+                                                ボタン、ドロップダウンリスト、テキストボックス、テーブル、メニュー、_チャートなどのオブジェクトを作成できます。
+                                                HTMLタグ内に関連する属性名と値を指定することで、少ないコードでシンプルに保つことができます。
+                                                物事を構築する際に時間を節約します。
+                                                それは習得、使用、マスターするのが簡単です。_
 
-<div style="font-size:15px;margin-left:20px;margin-top:20px;padding-left:10px">	
+                                                The JavaScript library that turns complicated code into something more restful._
+                                                Potato.js is another way of coding for web applications._
+                                                It extends HTML code with custom tags._
+                                                You can create objects such as buttons, dropdown lists, text boxes, tables, menus,_ 
+                                                charts, and more by providing the relevant attribute name and value inside an HTML tag,_ 
+                                                which allows you to write less code and keep it simple, saving time when building things._
+                                                It is easy to learn, use, and master.`;
 
-<div class="flipPotato">
-	<div class="back flipItem">
-		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
-     src="potato.jpg"> 
-	</div>
-	<div class="front flipItem">P</div>
-</div>
-<div class="flipPotato">
-	<div class="back flipItem">
-		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
-     src="Baked Potatoes.jpg"> 
-	</div>
-	<div class="front flipItem">O</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">
-		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
-     src="Croquettes.jpg"> 
-	</div>
-	<div class="front flipItem">T</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">
-		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
-     src="maxresdefault.jpg"> 
-	</div>
-	<div class="front flipItem">A</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">K</div>
-	<div class="front flipItem">T</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">.</div>
-	<div class="front flipItem">O</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">S</div>
-	<div class="frontOther flipItem">.</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">.</div>
-	<div class="front flipItem">J</div>
-</div>	
-<div class="flipPotato">
-	<div class="back flipItem">
-	  <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
-     src="potatoscript-potato.js.png"> 
-	</div>
-	<div class="front flipItem">S</div>
-</div>	
-<br>	
-<br>
-<br>
-<br>	
-<p style="margin-top:20px">	
-	The JavaScript library that turns complicated code into something more restful.<br>
-	<p>Potato JavaScript is another way of coding for web applications.<br> 
-	It extends HTML code with custom tags and integrates with other libraries like Chart.js, jQuery, and AngularJS.<br>
-	You can create objects such as buttons, dropdown lists, text boxes, tables, menus, charts, and more<br>
-	by providing the relevant attribute name and value inside an HTML tag, which allows you to write less code and keep it simple, saving time when building things.</p>
-	<p>It is easy to learn, use, and master.</p>
-	For those who code with AngularJS, they can use ng-code inside the PotatoJS tag as well. <br>
-	For example, you can put ng-model inside the tag and bind it to other objects using {{data}}.		
-</p>
-<br>	
-<p>	
-複雑なコードをよりシンプルなものに変えるJavaScriptライブラリです。<br>
-ポテトJavaScriptは、Webアプリケーションのコーディングの別の方法です。<br>
-カスタムタグを使用してHTMLコードを拡張し、Chart.js、jQuery、AngularJSなどの他のライブラリと統合します。<br>
-HTMLタグ内に関連する属性名と値を指定することで、ボタン、ドロップダウンリスト、テキストボックス、テーブル、メニュー、チャートなどのオブジェクトを作成でき、<br>
-コードを少なくしてシンプルに保ち、物事を構築する際に時間を節約できます。</p>
-<p>習得、使用、マスターするのが簡単です。</p>
-AngularJSでコーディングする人々にとっては、PotatoJSタグ内でもng-codeを使用できます。<br>
-例えば、タグ内にng-modelを置いて、{{data}}を使って他のオブジェクトにバインドすることができます。		
-</P>	
-<section>
-	<p>The basic syntax of the code looks like this:</p>
-	<p>コードの基本的な構文は次のようになります。</p>
-	<div class="code-example">
-		&lt;[system name]-[object type]-[object id] [attribute1 attribute2...] /&gt;<br>
-		<img src="potato-syntax.gif" alt="potato" class="spotlight" aria-busy="false">
-	</div>
-</section>
+                                                displayOnCreate();
 
-<P>
-<h3>◎ Potato's Objects: <span style="font-size: 13px;"> (各オブジェクトコードの基本的な構文)</span>	</h3>
-<ul style=" list-style-type: none;">
-	<li><h3 style="color: green;">■ POTATO-BUTTON</h3>
-		<section>
-			<div class="code-example">
-				<table>
-					<tr>
-						<td style="vertical-align: top;">
-							<potato-button-obutton 		  
-								marginTop="10px"
-								background="yellow"		  
-								value="Click Me"
-								image="image/img-p.png 21 21"		       
-								onclick="alert('I am OButton')"
-							></potato-button-obutton>
-						</td>
-						<td style="vertical-align: top;">
-							<p style="margin-left: 30;color: green;">&lt;potato-button-buttonID </p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="Click Me" </p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">background</font>="yellow"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>="10px"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">image</font>="image/img-p.png 21 21"</p> 
-								<p style="margin-left: 50px;color:blue"><font style="color: red;">onclick</font>="alert('I am OButton')"</p>
-							<p style="margin-left: 30px;color: green;">/potato-button-buttonID&gt;</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</section>
-	 </li>
-	 <br>
-	 <li><h3 style="color: green;">■ POTATO-CALENDAR</h3>
-		<section>
-			<div class="code-example">
-				<table>
-					<tr>
-						<td style="vertical-align: top;">
-							<potato-calendar-ocalendar 		  
-								marginTop=-15px
-								value=potato.today()	
-							></potato-calendar-ocalendar>
-						</td>
-						<td style="vertical-align: top;">
-							<p style="margin-left: 30;color: green;">&lt;potato-calendar-calendarID </p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>="-15px" </p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="potato.today()" </p>
-							<p style="margin-left: 30px;color: green;">/potato-calendar-calendarID&gt;</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</section>
-	 </li>
-	 <br>
-	 <li><h3 style="color: green;">■ POTATO-CHART</h3>
-		<section>
-			<div class="code-example">
-				<table>
-					<tr>
-						<td style="vertical-align: top;">
-							<potato-chart-chartRadar 		  
-								chartType="radar"
-								title="Potato Chart Radar"
-								titleDisplay=true
-								height=330px
-								width=500px
-								data=" [70, 60, 70, 70, 70]"
-								label= "日本語 (日常会話レベル N2)"
-								xLabelData=menu1,menu2,menu3,menu4
-							></potato-chart-chartRadar>
-							<potato-chart-chartID 		  
-								chartType="bar"
-								stacked=true
-								data='[
-									["Menu1","1","3","4","8"],
-									["Menu2","2","5","7","14"],
-									["Menu3","3","1","4","8"],
-									["Menu4","5","7","12","24"]
-								]'		      
-								border="0px solid black"
-								colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
-								xLabelData=menu1,menu2,menu3,menu4
-								xLabelAngle=10
-								yAxesLabel="g"
-								y2AxesLabel="calories"
-								data2Label="calories"
-								dataLabel="Protein,Fat,Sugar"
-								labelFontSize=18
-								label2FontSize=18
-								legendDisplay=true
-								legendPosition="bottom"
-								pointBorderColorIndex="red,blue,yellow,orange,green,grey"
-								pointBorderWidth="2,2,2"
-								pointStyle="rect,rectRot,triangle"
-								title="Potato Chart BAR"
-								titleDisplay=true
-								height=330px
-								width=500px
-								click='return alert(potato.chartYvalue)'
-							></potato-chart-chartID>
-						</td>
-						<td style="vertical-align: top;">
-							<p style="margin-left: 30;color: green;">&lt;potato-chart-chartID </p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">chartType</font>=Bar</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">stacked</font>=true</p>
-						    <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
-									["Menu1","1","3","4","8"],<br>
-									["Menu2","2","5","7","14"],<br>
-									["Menu3","3","1","4","8"],<br>
-									["Menu4","5","7","12","24"]<br>
-								]'<br>		      
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">border</font>="0px solid black"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">colorIndex</font>="#e3ff7f,#a1a4ff,yellow,orange,green,grey"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelData</font>=menu1,menu2,menu3,menu4</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelAngle</font>=10</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">y2AxesLabel</font>="calories"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">data2Label</font>="calories"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">dataLabel</font>="Protein,Fat,Sugar"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">labelFontSize</font>=18</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">label2FontSize</font>=18</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">legendDisplay</font>=true</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">legendPosition</font>="bottom"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderColorIndex</font>="red,blue,yellow,orange,green,grey"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderWidth</font>="2,2,2"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">pointStyle</font>="rect,rectRot,triangle"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">title</font>="my OChart BAR"</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">titleDisplay</font>=true</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=330px</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=500px</p>
-							<p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>='return alert(potato.chartYvalue)'</p>
-							<p style="margin-left: 30px;color: green;">/potato-chart-chartID&gt;</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</section>
-	 </li>
-	 <br>
-	   
+                                                function displayOnCreate() {
+                                                if (i < txt.length) {
+                                                    var t = txt.charAt(i);
+                                                    document.getElementById("txtOnCreate").innerHTML += t;
+                                                    if (t === '_' || t === '。') {
+                                                    document.getElementById("txtOnCreate").innerHTML += '<br>';
+                                                    }
+                                                    i++;
+                                                    setTimeout(displayOnCreate, speed);
+                                                } else {
+                                                    document.getElementById("txtOnCreate").innerHTML = "";
+                                                    i = 0;
+                                                    displayOnCreate();
+                                                }
+                                                }
+                                            </script>
+                                            </p>
+                                            <code>
+                                                <textarea style="padding:20px;font-size: 18px;background:transparent;border:0px;width:800px;height:500px">
+                                                </textarea>
+                                            </code>
+										</ul>
+								   </li>
+								   <li><br><span id="caret2" class="caret2">構築:</span>
+										<ul class="active2">
+											<section>
+                                                <p>The basic syntax of the code looks like this:　コードの基本的な構文は次のようになります。</p>
+                                                <div class="code-example">
+                                                    &lt;[system name]-[object type]-[object id] [attribute1 attribute2...] /&gt;<br>
+                                                </div>
+                                            </section>
+										</ul>
+									</li>
+									<li><br><span id="caret3" class="caret3"></span>
+								  </li>
+								</ul>
+							</div>
+                            <iframe id="boygirl" scrolling="no" style="overflow:hidden;border:0px;height:1600px;width:600px" src="empty.html"></iframe>
 
-	 <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
-	 ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
-	 </li>
-	   <potato-keypad-okeypad 
-              marginTop=-15px					    
-	      value="0"
-              top=-220px
-	      left=-150px			    
-	      htm="htm/keypad.htm"
-	   ></potato-keypad-okeypad>
-	<li>■ list - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OList">OList</a>
-	 ＜o-list-listid＞＜/o-list-listid＞
-	 </li> 
-	 <potato-list-olist
-	   marginTop=-15px
-	   width=180px		    
-	   data='[
-          ["Menu","Image","Calories","Fat"],
-          ["Parmesan Roasted Potato","<img src=\"../../potato.js/images/Parmesan Roasted Potato.jpg\" width=\"150px\" height=\"100px\">","183","13"],
-          ["Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
-        ]'	    
-	 ></potato-list-olist>
-	<li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a>
-	 </li>  
-	<p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
-	<li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a>
-	 ＜o-table-tableid＞＜o-table-tableid＞<br>
-	try to drag and drop me	
-	 </li> 
-	<o-table-mytable
-	dragdrop='
-		  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
-		  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
-		  document.getElementById("mytableResult").innerHTML=t;
-		  '		 
-        width=650px
-        height=200px
-        fontSizeTH=18px
-        fontSizeTD=20px
-        fontColorTD=red
-        header="No,Menu,Image,Calories,Fat"
-        data='[
-          ["1","Potato Pie","<img src=\"../../potato.js/images/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
-          ["2","Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
-        ]'
-        click=myTableClick()
-        callback=myTableCallback()
-        editCell="
-	trigger:click;
-        width:80px;
-        tool:default;
-        indexCol:0;
-        editCol:[1,2,3,4];
-        callback:
-          function(newVal,oldVal,targetCol,SelectCol){
-          document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
-        };
-        "
-        multipleSelect='
-          mark:〇;
-          indexCol:1;
-          selectCol:0;
-          callback:function(potato){
-            $("#div_cart").html("");
-            var t="";
-            for(var i=0;i<potato.length;i++){
-               t+=i+1+". "+potato[i]+"<br>";
-            }
-            $("#mytableResult").html(t);
-          };
-        '
-      /></o-table-mytable>
-	<div id="mytableResult"></div>	
-      <br>	
-	 <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a>
-		 ＜potato-text-textid＞＜/potato-text-textid＞
-	</li>
-	  <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
-	  <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
-	
-	<br>	
-	 <li>■ tab - <a>OTab</a>
-		 ＜potato-tab-tabid /＞
-	</li>
-	<o-tab-mytab
-	    header = 'OButton || OText Box || OMenu'
-	    body = '
-		<potato-button-mybtn1 value="button1"></potato-button-mybtn1>
-		<potato-button-mybtn2 value="button2"></potato-button-mybtn2>
-		<potato-button-mybtn3 value="button3"></potato-button-mybtn3>
-		||
-		<potato-text-mytext value="test"/>
-		||
-		menu content go over here.....
-	    '
-	    background=lightblue
-	    color=blue
-	    tabHeight=23px
-	    tabWidth=100px
-	    fontSize=18px
-	    speed=1000
-	    marginTop=10px
-            height=300px
-	    width=350px	     
-	  ></o-tab-mytab>
-	
-  </ul>	
-</P>
-<br><br>
-<P>With these you can create some simple application as below:</P>
-<P>これらを使用して、次のような簡単なアプリケーションを作成できます。</P>	
-		
-<img class="spotlight" aria-busy="false" style="width: 800px; height: 400px;" alt="画像に含まれている可能性があるもの:テキスト" src="potatoDemo.gif">
-<br><br>
+						</div>
+						<div id="two" style="display:none" class="content-box-menu">
+							<div class="col-one-menu col">
 
-<h3>Example 01: OButton</h3>		
-<P>	
-Create a button to set the document title to "I am potato button" you just write the following code in html document:
-</P>
-<table>
-<tr>
-<td><img class="spotlight" aria-busy="true" style="width: 390px; height: 510px;" alt="画像に含まれている可能性があるもの:テキスト" src="OButton.png">
-</td>
-<td style="vertical-align:top">
-<img class="spotlight" aria-busy="false" style="width: 170px; height: 170px;" alt="画像に含まれている可能性があるもの:テキスト" src="OButton.gif">
-</td>
-</tr>
-</table>
-<p>※You can use the keyword "potato" or just "o" as the [system name] <br>for example < o-button-mybutton /> also will do.
-I call it <b>OButton</b></p>
+								<P>
+                                    <h3>◎ Potato's Objects: <span style="font-size: 13px;"> (各オブジェクトコードの基本的な構文)</span>	</h3>
+                                    <ul style=" list-style-type: none;">
+                                        <li><h3 style="color: green;">■ POTATO-BUTTON</h3>
+                                            <section>
+                                                <div class="code-example">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <potato-button-obutton 		  
+                                                                    marginTop="10px"
+                                                                    background="yellow"		  
+                                                                    value="Click Me"
+                                                                    image="image/img-p.png 21 21"		       
+                                                                    onclick="alert('I am OButton')"
+                                                                ></potato-button-obutton>
+                                                            </td>
+                                                            <td style="vertical-align: top;">
+                                                                <p style="margin-left: 30;color: green;">&lt;potato-button-buttonID </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="Click Me" </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">background</font>="yellow"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>="10px"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">image</font>="image/img-p.png 21 21"</p> 
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">onclick</font>="alert('I am OButton')"</p>
+                                                                <p style="margin-left: 30px;color: green;">/potato-button-buttonID&gt;</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                         </li>
+                                         <br>
+                                         <li><h3 style="color: green;">■ POTATO-CALENDAR</h3>
+                                            <section>
+                                                <div class="code-example">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <potato-calendar-ocalendar 		  
+                                                                    marginTop=-15px
+                                                                    value=potato.today()	
+                                                                ></potato-calendar-ocalendar>
+                                                            </td>
+                                                            <td style="vertical-align: top;">
+                                                                <p style="margin-left: 30;color: green;">&lt;potato-calendar-calendarID </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>="-15px" </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="potato.today()" </p>
+                                                                <p style="margin-left: 30px;color: green;">/potato-calendar-calendarID&gt;</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                         </li>
+                                         <br>
+                                         <li><h3 style="color: green;">■ POTATO-LIST</h3>
+                                            <section>
+                                                <div class="code-example">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <potato-list-olist
+                                                                    marginTop=-15px
+                                                                    width=180px		    
+                                                                    data='[
+                                                                        ["Menu","Image","Calories","Fat"],
+                                                                        ["Parmesan Roasted Potato","<img src=\"image/Maple-Bacon Hasselback.jpg\" width=\"150px\" height=\"100px\">","183","13"],
+                                                                        ["Mashed Potato","<img src=\"image/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
+                                                                        ]'	    
+                                                                ></potato-list-olist>
+                                                            </td>
+                                                            <td style="vertical-align: top;">
+                                                                <p style="margin-left: 30;color: green;">&lt;potato-list-listID </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>=-15px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=180px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+                                                                    ["Menu","Image","Calories","Fat"],<br>
+                                                                    ["Parmesan Roasted Potato","&ltimg src='images/Parmesan Roasted Potato.jpg' width='150px' height='100px'&gt","183","13"],<br>
+                                                                    ["Mashed Potato","&ltimg src='images/Mashed Potato.jpg' width='150px' height='100px'&gt","455","55"]<br>
+                                                                ]'<br>	
+                                                                <p style="margin-left: 30px;color: green;">/potato-list-listID&gt;</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                         </li>
+                                         <br>
+                                         <li><h3 style="color: green;">■ POTATO-TAB</h3>
+                                            <section>
+                                                <div class="code-example">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <o-tab-mytab
+                                                                    header = 'OButton || OText Box || OMenu'
+                                                                    body = '
+                                                                    <potato-button-mybtn1 value="button1"></potato-button-mybtn1>
+                                                                    <potato-button-mybtn2 value="button2"></potato-button-mybtn2>
+                                                                    <potato-button-mybtn3 value="button3"></potato-button-mybtn3>
+                                                                    ||
+                                                                    <potato-text-mytext value="test"/>
+                                                                    ||
+                                                                    menu content go over here.....
+                                                                    '
+                                                                    background=lightblue
+                                                                    color=blue
+                                                                    tabHeight=23px
+                                                                    tabWidth=100px
+                                                                    fontSize=18px
+                                                                    speed=1000
+                                                                    marginTop=10px
+                                                                    height=300px
+                                                                    width=350px	     
+                                                                ></o-tab-mytab>
+                                                            </td>
+                                                            <td style="vertical-align: top;">
+                                                                <p style="margin-left: 30;color: green;">&lt;potato-tab-tabID </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">header</font>='OButton || OText Box || OMenu'</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">body</font>='<br>
+                                                                    &ltpotato-button-mybtn1 value="button1"&gt &lt/potato-button-mybtn1&gt<br>
+                                                                    &ltpotato-button-mybtn2 value="button2"&gt &lt/potato-button-mybtn2&gt<br>
+                                                                    &ltpotato-button-mybtn3 value="button3"&gt &lt/potato-button-mybtn3&gt<br>
+                                                                    ||<br>
+                                                                    &ltpotato-text-mytext value="test"/&gt<br>
+                                                                    ||<br>
+                                                                    menu content go over here.....
+                                                                    '</p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">backgrtound</font>=lightblue </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">color</font>=blue </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">tabHeight</font>=23px </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">tabWidth</font>=100px </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSize</font>=18px </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">speed</font>=1000 </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>=10px </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=300px </p>
+                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=350px </p>
+                                                                <p style="margin-left: 30px;color: green;">/potato-tab-tabID&gt;</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                         </li>
+                                         <br>
+                                         <li><h3 style="color: green;">■ POTATO-TABLE</h3>
+                                            <section>
+                                                <div class="code-example">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <o-table-mytable
+                                                                dragdrop='
+                                                                    var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+                                                                    potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+                                                                    document.getElementById("mytableResult").innerHTML=t;
+                                                                    '		 
+                                                                    width=650px
+                                                                    height=200px
+                                                                    fontSizeTH=18px
+                                                                    fontSizeTD=20px
+                                                                    fontColorTD=red
+                                                                    header="No,Menu,Image,Calories,Fat"
+                                                                    data='[
+                                                                    ["1","Potato Pie","<img src=\"image/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
+                                                                    ["2","Mashed Potato","<img src=\"image/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
+                                                                    ]'
+                                                                    click=myTableClick()
+                                                                    callback=myTableCallback()
+                                                                    editCell="
+                                                                trigger:click;
+                                                                    width:80px;
+                                                                    tool:default;
+                                                                    indexCol:0;
+                                                                    editCol:[1,2,3,4];
+                                                                    callback:
+                                                                    function(newVal,oldVal,targetCol,SelectCol){
+                                                                    document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
+                                                                    };
+                                                                    "
+                                                                    multipleSelect='
+                                                                    mark:〇;
+                                                                    indexCol:1;
+                                                                    selectCol:0;
+                                                                    callback:function(potato){
+                                                                        $("#div_cart").html("");
+                                                                        var t="";
+                                                                        for(var i=0;i<potato.length;i++){
+                                                                        t+=i+1+". "+potato[i]+"<br>";
+                                                                        }
+                                                                        $("#mytableResult").html(t);
+                                                                    };
+                                                                    '
+                                                                /></o-table-mytable>
+                                                            </td>
+                                                            <td style="vertical-align: top;">
+                                                                <p style="margin-left: 30;color: green;">&lt;potato-table-tableID </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>=-15px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=650px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=200px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSizeTH</font>=18px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSizeTD</font>=20px </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontCVolorTD</font>=red </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">header</font>="No,Menu,Image,Calories,Fat"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+                                                                    ["1","Potato Pie","&ltimg src=\"image/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\"&gt","183","13"],<br>
+                                                                ["2","Mashed Potato","&ltimg src=\"image/Mashed Potato.jpg\" width=\"100px\" height=\"60px\"&gt","455","55"]<br>
+                                                                ]'</p>	
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>=myTableClick() </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">callback</font>=myTableCallback() </p>
+                                                                <p> dragdrop='
+                                                                    var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+                                                                    potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+                                                                    document.getElementById("mytableResult").innerHTML=t;
+                                                                    '	</p>
+                                                                <p>editCell="
+                                                                trigger:click;
+                                                                width:80px;
+                                                                tool:default;
+                                                                indexCol:0;
+                                                                editCol:[1,2,3,4];
+                                                                callback:
+                                                                function(newVal,oldVal,targetCol,SelectCol){
+                                                                document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
+                                                                };
+                                                                "</p>
+                                                                <p>
+                                                                multipleSelect='
+                                                                    mark:〇;
+                                                                    indexCol:1;
+                                                                    selectCol:0;
+                                                                    callback:function(potato){
+                                                                        $("#div_cart").html("");
+                                                                        var t="";
+                                                                        for(var i=0;i<potato.length;i++){
+                                                                            t+=i+1+". "+potato[i]+"<br>";
+                                                                        }
+                                                                        $("#mytableResult").html(t);
+                                                                    };
+                                                                '</p>
+                                                                <p style="margin-left: 3px;color: green;">&lt/potato-table-tableID&gt;</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                         </li>
+                                         <br>
+                                         <li><h3 style="color: green;">■ POTATO-CHART</h3>
+                                            <section>
+                                                <div class="code-example">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="vertical-align: top;">
+                                                                <canvas id="skillChart" width="650px" height="300px"></canvas>
+                                                                <potato-chart-chartID 		  
+                                                                    chartType="bar"
+                                                                    stacked=true
+                                                                    data='[
+                                                                        ["Menu1","1","3","4","8"],
+                                                                        ["Menu2","2","5","7","14"],
+                                                                        ["Menu3","3","1","4","8"],
+                                                                        ["Menu4","5","7","12","24"]
+                                                                    ]'		      
+                                                                    border="0px solid black"
+                                                                    colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+                                                                    xLabelData=menu1,menu2,menu3,menu4
+                                                                    xLabelAngle=10
+                                                                    yAxesLabel="g"
+                                                                    y2AxesLabel="calories"
+                                                                    data2Label="calories"
+                                                                    dataLabel="Protein,Fat,Sugar"
+                                                                    labelFontSize=18
+                                                                    label2FontSize=18
+                                                                    legendDisplay=true
+                                                                    legendPosition="bottom"
+                                                                    pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+                                                                    pointBorderWidth="2,2,2"
+                                                                    pointStyle="rect,rectRot,triangle"
+                                                                    title="Potato Chart BAR"
+                                                                    titleDisplay=true
+                                                                    height=330px
+                                                                    width=500px
+                                                                    click='return alert(potato.chartYvalue)'
+                                                                ></potato-chart-chartID>
+                                                            </td>
+                                                            <td style="vertical-align: top;">
+                                                                <p style="margin-left: 30;color: green;">&lt;potato-chart-chartID </p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">chartType</font>=Bar</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">stacked</font>=true</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+                                                                        ["Menu1","1","3","4","8"],<br>
+                                                                        ["Menu2","2","5","7","14"],<br>
+                                                                        ["Menu3","3","1","4","8"],<br>
+                                                                        ["Menu4","5","7","12","24"]<br>
+                                                                    ]'<br>		      
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">border</font>="0px solid black"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">colorIndex</font>="#e3ff7f,#a1a4ff,yellow,orange,green,grey"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelData</font>=menu1,menu2,menu3,menu4</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelAngle</font>=10</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">y2AxesLabel</font>="calories"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data2Label</font>="calories"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">dataLabel</font>="Protein,Fat,Sugar"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">labelFontSize</font>=18</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">label2FontSize</font>=18</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">legendDisplay</font>=true</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">legendPosition</font>="bottom"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderColorIndex</font>="red,blue,yellow,orange,green,grey"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderWidth</font>="2,2,2"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">pointStyle</font>="rect,rectRot,triangle"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">title</font>="my OChart BAR"</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">titleDisplay</font>=true</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=330px</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=500px</p>
+                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>='return alert(potato.chartYvalue)'</p>
+                                                                <p style="margin-left: 30px;color: green;">/potato-chart-chartID&gt;</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </section>
+                                         </li>
+                                         <br>
+                                           
+                                    
+                                         <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
+                                         ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
+                                         </li>
+                                           <potato-keypad-okeypad 
+                                                  marginTop=-15px					    
+                                              value="0"
+                                                  top=-220px
+                                              left=-150px			    
+                                              htm="htm/keypad.htm"
+                                           ></potato-keypad-okeypad>
+                                        <li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a>
+                                         </li>  
+                                        <p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
+                                        <li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a>
+                                         ＜o-table-tableid＞＜o-table-tableid＞<br>
+                                        try to drag and drop me	
+                                         </li> 
+                                        
+                                        <div id="mytableResult"></div>	
+                                          <br>	
+                                         <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a>
+                                             ＜potato-text-textid＞＜/potato-text-textid＞
+                                        </li>
+                                          <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
+                                          <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
+                                        
 
-<h3>Example 02: OButton with toggle event</h3>
-<p>Create a toggle button</p>
-<table><tr><td style="font-size:15px;text-align:left">
-＜o-button-mybutton<br>
-<span class="tab2">value  = " toggle me "<br>
-<span class="tab2">toggle="<br>
-<span class="tab4">if(potato.toggle['mybutton']=='on'){ <br>
-<span class="tab6">document.getElementById('mybutton').innerText='toggle on'; <br>
-<span class="tab6">document.getElementById('lightbulb').src='image/lightbulbon.gif';<br>
-<span class="tab4">}else{<br>
-<span class="tab6">document.getElementById('mybutton').innerText='toggle off'; <br>
-<span class="tab6">document.getElementById('lightbulb').src='image/lightbulboff.gif';<br>								 
-<span class="tab4">}
-"<br>
-＞＜/o-button-mybutton＞<br>		
-</td>	
-<td style="width:250px;vertical-align:top;padding-top:10px">
-<o-button-mybutton
-value="click me"
-toggle="
-	if(potato.toggle['mybutton']=='on'){
-		document.getElementById('mybutton').innerText='toggle on';
-		document.getElementById('lightbulb').src='image/lightbulbon.gif';
-	}else{
-		document.getElementById('mybutton').innerText='toggle off';
-		document.getElementById('lightbulb').src='image/lightbulboff.gif';								 
-	}
-"
-></o-button-mybutton>	
-<img id="lightbulb" src="image/lightbulboff.gif" style="width:100px;height:150px"/>	
-</td></tr></table><br>	
+                                        
+                                      </ul>	
+                                </P>
+							</div>
+                            <iframe id="boygirl2" scrolling="no" style="overflow:hidden;border:0px;height:1600px;width:600px" src="empty.html"></iframe>
 
-<h3>Example 03: OKeypad</h3> 	
-<p>Create a text box object with input keypad</p>
-<table>
-<tr>
-<td style="vertical-align:top">
-<img class="spotlight" aria-busy="false" style="width: 350px; height: 300px;" alt="画像に含まれている可能性があるもの:テキスト" src="OKeypad.gif">
-</td>
-</tr>
-</table>
+						</div>
+						<div id="three" style="display:none" class="content-box-menu">
+							<div class="col-one-menu col"  >
 
-<p>Example 4: Create a bar Chart object (i.e. <b>OChart</b>)
-<table style="width:1000px">
-<tr>
-<td><img class="spotlight" aria-busy="true" style="width: 610px; height: 510px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="potato-chart-mybar.png">
-</td>
-<td><img class="spotlight" aria-busy="false" style="width: 600px; height: 350px;" alt="写真の説明はありません。" src="OChartDemo.gif">
-</td>
-</tr>
-</table>
+								<div id="div_pims">
+									<table>
+										<tr>
+											<td>
+												<h1 data-text="P I M S">P I M S</h1>
+											</td>
+											<td style="padding-left:60px;vertical-align:top;font-size:15px">
+											    <font style="color:blue" >目的：</font><br>
+												生産進捗や品質状況等の情報<br>
+												を的確に把握することができる<br>
+												システムをつくる。<br>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="item-hints">
+								  <div class="hint" data-position="4"><!-- is-hint -->
+									<span class="hint-radius"></span>
+									<span class="hint-dot"></span>
+									<div class="hint-content do--split-children">
+									  <p style="color:red;margin-left:-80px;">Plant 工場</p>
+									</div>
+								  </div>
+								</div>
 
-<h2> Installing 設定</h2>
-<p style="width:700px">
-    1. Step by step <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/2.-Setup">setup Apache Web Server</a><br> 
-      and editing on the httpd.conf and php.ini to let PHP talk with Apache for fetching data from database.<br>
-    2. Download the relevant libraries from <a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a><br>
-      and include them inside your html file<br>	  
-  <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="potatoscript-potato.js-setup-youtube.png"><br><br>
-</p>
+								<div class="item-hints-i">
+								  <div class="hint" data-position="4"><!-- is-hint -->
+									<span class="hint-radius"></span>
+									<span class="hint-dot"></span>
+									<div class="hint-content do--split-children">
+									  <p style="color:red;margin-left:-150px;">Information　情報</p>
+									</div>
+								  </div>
+								</div>
 
+								<div class="item-hints-m">
+								  <div class="hint" data-position="4"><!-- is-hint -->
+									<span class="hint-radius"></span>
+									<span class="hint-dot"></span>
+									<div class="hint-content do--split-children">
+									  <p style="color:red;margin-left:120px;">Management　管理</p>
+									</div>
+								  </div>
+								</div>
 
-<h2> Built With 構築</h2>
-<p style="width:700px">
-1. potato javascript requires <b>jquery-3.4.1.js</b> or later and <b>jquery-ui.js.</b><br>
-<a target="_blank" href="https://jquery.com/download/">https://jquery.com/download/</a> or <br> 
-<a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a>
-<br><br>
-2. To create chart object with potato the chart.js was required and the library can be obtained from <br>
-<a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> or<br> 
-<a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a>
-<br><br>
-</p>
-
-<h2> Contributing 寄稿</h2>
-
-  <div style="float:left;width:300px">
-	1. Potato JavaScript <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation">Documentation</a>.
-  </div>	
-<!--	
-  <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
-       src="potatoscript-potato.js-wiki.png"><br>
-  <div style="float:left;width:500px">
-	2. Potato JavaScript <a target="_blank" href="https://www.youtube.com/channel/UCSvc1mfBihTH_qfkAs7Iy4g">Tutorials</a>.<br>
-	   I spent almost 3 hours at StarBucks Yonago Japan with a cup of AMERICANO coffee every night for the following tutorials.  
-  </div>
-  <img class="spotlight" aria-busy="true" style="width: 100px; height: 30px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="youtube.png">
-  <img class="spotlight" aria-busy="true" style="width: 60px; height: 60px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="image/potatoyoutube.png">
-  <br>	
--->	
-	
-  <a target="_blank" href="https://www.youtube.com/channel/UCSvc1mfBihTH_qfkAs7Iy4g/about">About</a> <br>
-  <ul style="margin-left:50px">
-	<li>Potato.JavaScript Tutorial 001 - <a target="_blank" href="https://youtu.be/XrzNLFtjt8M">Potato.js Introduction</a></li>
-	<li>Potato.JavaScript Tutorial 002 - <a target="_blank" href="https://youtu.be/Eyj2oz_Uqms">Setup Apache Web Server & install potato.js</a></li>
-	<li>Potato.JavaScript Tutorial 003 - <a target="_blank" href="https://youtu.be/xW5u8SLkLV8">Setup Project & Create Object</a></li>  
-	<li>Potato.JavaScript Tutorial 004 - <a target="_blank" href="https://youtu.be/eKOGr8kPAes">Create OButton & OText</a></li>
-	<li>Potato.JavaScript Tutorial 005 - <a target="_blank" href="https://youtu.be/wVqWpgqnDgw">Potato Object Review & OList</a></li>
-	<li>Potato.JavaScript Tutorial 006 - <a target="_blank" href="https://youtu.be/qWKZCTYYKqY">OList & PostgreSQL part 1 setup PostgreSQL</a></li>
-	<li>Potato.JavaScript Tutorial 007 - <a target="_blank" href="https://youtu.be/EXrKXNtS8ro">OList & PostgreSQL part 2 setup php.ini</a></li> 
-	<li>Potato.JavaScript Tutorial 008 - <a target="_blank" href="https://youtu.be/MoQavWBdQbw">OTable part 1 create HTML table element</a></li> 
-	<li>Potato.JavaScript Tutorial 009 - <a target="_blank" href="https://youtu.be/pdFhtmEl02g">OTable part 2 editCell to edit table data</a></li> 
-	<li>Potato.JavaScript Tutorial 010 - <a target="_blank" href="https://youtu.be/fN3M61iB1n0">OTable part 3 editCell with tool & selectMultiple</a></li> 
-	<li>Potato.JavaScript Tutorial 011 - <a target="_blank" href="https://youtu.be/piGeZEjRXU0">OTable part 4 Drag n Drop</a></li>
-	<li>Potato.JavaScript Tutorial 012 - <a target="_blank" href="https://youtu.be/EeOdHdNGN4s">OTable part 5 Setup MySQL DataBase</a></li>  
-	<li>Potato.JavaScript Tutorial 013 - <a target="_blank" href="https://youtu.be/0_tBYzrtac0">OTable part 6 Drag n Drop with MySQL DataBase & PDO</a></li>    
-	<li>Potato.JavaScript Tutorial 014 - <a target="_blank" href="https://youtu.be/TuU1zqxjSaI">Create HTML Chart Object with OChart</a></li>      
-	  
-  </ul>	  
-<!--
-<h2> Authors 著者</h2>
-<p style="width:900px">
-I am <b id="bruce">BRUCE LIM.K.S. (林 建成)</b> the author live in JAPAN since 2004, <br>	
-I graduated from engineering background (Mechanical Engineering at Coventry University United Kingdom),<br> 
-but my final year's undergraduate project had led me to the world of programming.<br>
-(Developing software to find the natural frequency and damping factor from the input data<br> 
-of some vibration measurement device using MathLab programming language.)<br> 
-It combined the fields of engineering and programming.<br>
-The result was good and encouraged me continue to develop my programming skill until now.
-<div stye="height:100px"><img id="div_bruce" class="spotlight" aria-busy="true" 
-style="display:none;margin-left:50px;width: 70px; height: 100px;" 
-alt="bruce lim" src="image/bruce.jpg"></div>	
-This is my first JavaScript Library, which was developed since year 2010 in JAPAN. <br>
-I call it <b>potato javascript</b> or <b>o</b> script (o = potato, why because its as simple as potato)
-</p>
+								<div class="item-hints-s">
+								  <div class="hint" data-position="4"><!-- is-hint -->
+									<span class="hint-radius"></span>
+									<span class="hint-dot"></span>
+									<div class="hint-content do--split-children">
+									  <p style="color:red;margin-left:100px;">System　システム</p>
+									</div>
+								  </div>
+								</div>
 
 
-<h2> Support & Contact 連絡先</h2>
-<img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="potatoscript" src="image/myemail.png"><br>
--->
+								<!--
+								<iframe style="margin-left:100px;border:0px;width:500px;" src="javaScriptCodeStructure.html"></iframe>
+								<br><br>
+								-->
 
-<h2> License ライセンス</h2>
 
-potato.js is licensed under the terms of the GNU General Public License v3.0.<br>
-<img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="画像に含まれている可能性があるもの:テキスト" 
-	 src="image/potato.js license.png"><br>
-</div>
+								<table>
+									<tr>
+										<td id="menu" style="width:150px;vertical-align:top">
+											<div id="menu-1" class="menu menu-current">日報情報</div>
+											<div id="menu-2" class="menu" style="margin-top:60px">品質情報</div>
+											<div id="menu-3" class="menu" style="margin-top:120px">生産進捗</div>
+											<div id="menu-4" class="menu" style="margin-top:180px">棚卸情報</div>
+											<div id="menu-5" class="menu" style="margin-top:240px">日常点検</div>
+											<div id="menu-6" class="menu" style="margin-top:300px">治具情報</div>
+											<div id="menu-7" class="menu" style="margin-top:360px">組織管理</div>
+										</td>
+										<td>
+											<div id="div-menu-1" class="menu-show">
+												<span class="span-s2">■　日報情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s" style="margin-left:-50px;">
+														<tr>
+															<th>
+																<img class="img-s" src="images/pims-ver1.png"><br>
+																<img class="img-s" src="../../homepage/OKeypad.gif"><br>
+																 <potato-chart-mybar
+																chartType=Bar
+																stacked=true
+																data='[
+																	["2018年","1","3","4","8"],
+																	["2019年","2","5","7","14"],
+																	["2020年","3","1","4","8"]
+																]'
+																	border="0px solid black"
 
-	
+																	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
 
-<script>
-	
-   $('.flipItem')
-	.mouseover(
-	  function(){
-	    var $this = $(this);
-	   
-	    $.expand($this,80,80);
-	    $this.css("zIndex",1000);    
-	
-	})
-	.mouseleave(function(){
-	  var $this = $(this);
-	  $.collapse($this,50,50);
-	  $this.css("zIndex",900);  
-	});		
-	
-   $("#bruce")
-   .css("cursor","pointer")
-   .mouseenter(function(){
-      $("#div_bruce").show();
-   })
-   .mouseout(function(){
-      $("#div_bruce").hide();	   
-   })
-</script>	
-</body>
+																xLabelData=menu1,menu2,menu3
+																xLabelAngle=10
+																	yAxesLabel=""
+
+
+																dataLabel="製造1課,製造2課,製造３課"
+																		labelFontSize=18
+																		label2FontSize=1
+																		legendDisplay=true
+																	legendPosition="bottom"
+																		pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+																		pointBorderWidth="0,0,0"
+																		pointStyle="rect,rectRot,triangle"
+
+																		title="生産実績"
+																	titleDisplay=true
+																		height=330px
+																		width=400px
+
+																	click='return alert(potato.chartYvalue)'
+																  ></potato-chart-mybar>
+															</th>
+															<td>
+																<p>□ 言語：JavaScript,PHP</p>
+																<p>□ バーコードリーダー</p>
+																<p>□ JSON(JavaScript Object Notation)</p>
+																<p>□ ＡＪＡＸ(Asynchronous JavaScript and XML)</p>
+																<p>□ タッチスクリーンキーパッド</p>
+																<p>□ JQuery.js</p>
+																<p>□ Chart.js</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-2" class="menu-hide">
+												<span class="span-s2">■　品質情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<img class="img-s" style="width:400px" src="images/chart-c.png">
+															</th>
+															<td>
+																<p>□ 言語：C#</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-3" class="menu-hide">
+												<span class="span-s2">■　生産進捗管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<I style="font-weight:normal;margin-left:-95px">please try to drag and drop me</I>
+																<o-table-mytable
+																dragdrop='
+																	  var t="drag item ( "+potato.dragVal+" ) from ( "+
+																	  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+																	  document.getElementById("mytableResult").innerHTML=t;
+																	  '
+																	width=300px
+																	height=300px
+																	fontSizeTH=15px
+																	fontSizeTD=15px
+																	fontColorTD=red
+																	header="品名,3月,4月,5月"
+																	data='[
+																	  ["商品１","組立","","出荷"],
+																	  ["商品２","検査","梱包",""]
+																	]'
+																	click=myTableClick()
+																	callback=myTableCallback()
+
+																	multipleSelect='
+																	  mark:〇;
+																	  indexCol:1;
+																	  selectCol:0;
+																	  callback:function(potato){
+																		$("#div_cart").html("");
+																		var t="";
+																		for(var i=0;i<potato.length;i++){
+																		   t+=i+1+". "+potato[i]+"<br>";
+																		}
+																		$("#mytableResult").html(t);
+																	  };
+																	'
+																  /></o-table-mytable>
+
+																<div id="mytableResult"></div>
+															</th>
+															<td>
+																<p>□ 言語：JavaScript,PHP</p>
+																<p>□ AJAX、JSON、JQuery</p>
+																<p>□ ドラッグアンドドロップ機能付き</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-4" class="menu-hide">
+												<span class="span-s2">■　棚卸管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<img class="img-s" style="width:500px" src="images/system1-4.png">
+															</th>
+															<td>
+																<p>□ 言語：C# WinForm</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-5" class="menu-hide">
+												<span class="span-s2">■　日常点検システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<img class="img-s" style="width:500px" src="images/system1-5.png">
+															</th>
+															<td>
+																<p>□ 言語：JavaScript with Enchant.js (animation)</p>
+															</td>
+														</tr>
+													</table>
+
+												</div>
+											</div>
+											<div id="div-menu-6" class="menu-hide">
+												<span class="span-s2">■　治工具情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+
+															</th>
+															<td>
+																<p>□ 言語：Java</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-7" class="menu-hide">
+												<span class="span-s2">■　組織図管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+														<td>
+																<p style="margin-left:10px">□ jQuery.OrgChart.jsを使います。 </p>
+																<p style="margin-left:10px">□ Drag and Drop機能付きます。 </p>
+																<p style="margin-left:10px">□ Pan and Zoom機能付きます。 </p>
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<div id="chart-container"></div>
+
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+
+										</td>
+									</tr>
+								</table>
+
+							</div>
+						</div>
+						<div id="four" style="display:none" class="content-box-menu">
+					</div>
+				</div>
+
+			</td>
+		</tr>
+	</table>
+
+
+	<div id="btn-hover"></div>
+
+	<div style="display:none">
+
+          <input type="text" id="parent-node" class="parent-node-group">
+          <ul id="new-nodelist">
+            <li><input type="text" class="new-node"></li>
+          </ul>
+          <input type="text" id="child-node">
+     </div>
+
+
+  </body>
+
+
+
+
 </html>
