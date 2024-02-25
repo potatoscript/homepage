@@ -342,6 +342,7 @@ ul, #myUL {
 	padding-left:15px;
 	top:1px;
 	left:1px;
+	width	:1150px;
 }
 .current{
 	z-index:1001;
@@ -349,6 +350,7 @@ ul, #myUL {
 .col-one-menu{
 	float:left;
 	position:relative;
+	width	:1150px;
 }
 
 
