@@ -116,15 +116,15 @@ $( document ).ready(function() {
    var allTabs          = $(".tabs-menu li a");
 
 	$(".box-wrapper-menu").css({
-		"width":960+"px",
-		"height":3600+"px"
+		"width":760+"px",
+		"height":1600+"px"
    });
    $("#table-skill").css({
 		"width":750+"px"
    });
    $(".content-box-menu,.col-one-menu col").css({
-		"width":950+"px",
-		"height":3590+"px",
+		"width":750+"px",
+		"height":1590+"px",
 		"overflow":"auto"
    });
 
@@ -135,7 +135,7 @@ $( document ).ready(function() {
     $(".tabs-menu li:first-child a, .content-box-menu:first").addClass("current");
     $(".box-wrapper-menu .current .col").css("top",10+"px");
 	$('.col-one-menu').css({
-      'top':-5000+'px'
+      'top':-3000+'px'
     });
     $(".box-wrapper-menu .current .col-one-menu").css("top",0);
 	
@@ -153,7 +153,7 @@ $( document ).ready(function() {
         speedOne=Math.floor(Math.random()*1000)+500;
         colOne=$(".box-wrapper-menu .current .col-one-menu");
         colOne.animate({
-          "top":-5000+"px"
+          "top":-3000+"px"
         },speedOne);
 
         allContentBoxes.removeClass("current");
