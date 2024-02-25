@@ -116,11 +116,11 @@ $( document ).ready(function() {
    var allTabs          = $(".tabs-menu li a");
 
 	$(".box-wrapper-menu").css({
-		"width":1960+"px",
+		"width":1160+"px",
 		"height":4600+"px"
    });
    $("#table-skill").css({
-		"width":1950+"px"
+		"width":1150+"px"
    });
    $(".content-box-menu,.col-one-menu col").css({
 		"width":1950+"px",
