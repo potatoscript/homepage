@@ -205,13 +205,13 @@ $( document ).ready(function() {
 	
 	$('.menu')
       .mouseenter(function(){ 
-          $.collapse($('.menu-current'),100,40);
+          $.collapse($('.menu-current'),300,40);
 		  $('.menu-current').css({
 			"border-top-right-radius": "7px",
 			"border-bottom-right-radius": "7px",  
 			"background":"white"
 		  })
-		  $.expand($(this),130,40);
+		  $.expand($(this),330,40);
 		  $(this).css({
 			"border-top-right-radius": "20px",
 			"border-bottom-right-radius": "20px",  
@@ -220,14 +220,14 @@ $( document ).ready(function() {
 		  
       })
       .mouseleave(function(){
-        $.collapse($(this),100,40);
+        $.collapse($(this),300,40);
 		$(this).css({
 			"border-top-right-radius": "7px",
 			"border-bottom-right-radius": "7px",  
 			"background":"white"
 		  })
 		  
-		  $.expand($('.menu-current'),130,40);
+		  $.expand($('.menu-current'),330,40);
 		  $(".menu-current").css({
 			"border-top-right-radius": "20px",
 			"border-bottom-right-radius": "20px",  
@@ -244,13 +244,13 @@ $( document ).ready(function() {
 			"background":"white"
 		  })
 		  
-		  $.collapse($('.menu'),100,40);
+		  $.collapse($('.menu'),300,40);
 		  $(".menu").css({
 			"border-top-right-radius": "7px",
 			"border-bottom-right-radius": "7px",  
 			"background":"white"
 		  })
-		  $.expand($(this),130,40);
+		  $.expand($(this),330,40);
 		  $(this).css({
 			"border-top-right-radius": "20px",
 			"border-bottom-right-radius": "20px",  
