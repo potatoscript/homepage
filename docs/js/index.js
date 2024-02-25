@@ -133,9 +133,9 @@ $( document ).ready(function() {
 
 
     $(".tabs-menu li:first-child a, .content-box-menu:first").addClass("current");
-    $(".box-wrapper-menu .current .col").css("top",10+"px");
+    $(".box-wrapper-menu .current .col").css("top",20+"px");
 	$('.col-one-menu').css({
-      'top':-7000+'px'
+      'top':-9000+'px'
     });
     $(".box-wrapper-menu .current .col-one-menu").css("top",0);
 	
@@ -153,7 +153,7 @@ $( document ).ready(function() {
         speedOne=Math.floor(Math.random()*1000)+500;
         colOne=$(".box-wrapper-menu .current .col-one-menu");
         colOne.animate({
-          "top":-7000+"px"
+          "top":-9000+"px"
         },speedOne);
 
         allContentBoxes.removeClass("current");
