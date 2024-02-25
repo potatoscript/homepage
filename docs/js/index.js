@@ -153,7 +153,7 @@ $( document ).ready(function() {
         speedOne=Math.floor(Math.random()*1000)+500;
         colOne=$(".box-wrapper-menu .current .col-one-menu");
         colOne.animate({
-          "top":-4000+"px"
+          "top":-5000+"px"
         },speedOne);
 
         allContentBoxes.removeClass("current");
