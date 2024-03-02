@@ -85,7 +85,7 @@ ul, #myUL {
   color: black;
   display: inline-block;
   margin-right: 6px;
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
@@ -96,7 +96,7 @@ ul, #myUL {
   transform: rotate(0deg);
 }
 .caret-down3::before {
-  transform: rotate(0deg);
+  transform: rotate(90deg);
 }
 .caret-basic-down::before {
   transform: rotate(0deg);
@@ -111,8 +111,14 @@ ul, #myUL {
 }
 
 /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-.active,.active2,.activex{
+.active,.activex{
   display: block;
+}
+.active2{
+  display: block;
+}
+.active3{
+  display: none;
 }
 
 
@@ -139,19 +145,6 @@ ul, #myUL {
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,.5);
 }
-.flipPotato > .frontOther{
-  position:absolute;
-  transform: perspective(600px) rotateY(0deg);
-  background:#ffffff;
-  width:50px;
-  height:50px;
-  backface-visibility:hidden;
-  transition: transform .5s linear 0s;
-  padding:10px;
-  border:1px solid black;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,.5);
-}
 .flipPotato > .back{
   position:absolute;
   transform: perspective(600px) rotateY(180deg);
@@ -165,10 +158,42 @@ ul, #myUL {
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,.5);
 }
+.flipPotato > .frontWhite{
+  position:absolute;
+  transform: perspective(600px) rotateY(0deg);
+  background:#ffffff;
+  width:50px;
+  height:50px;
+  backface-visibility:hidden;
+  transition: transform .5s linear 0s;
+  padding:10px;
+  border:1px solid black;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.flipPotato > .backWhite{
+  position:absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background:#c0a894;
+  width:50px;
+  height:50px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+  padding:10px;
+  border:1px solid black;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.5);
+}
 .flipPotato:hover > .front{
   transform: perspective(600px) rotateY(-180deg);
 }
 .flipPotato:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.flipPotato:hover > .frontWhite{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.flipPotato:hover > .backWhite{
   transform: perspective(600px) rotateY(0deg);
 }
 
@@ -302,7 +327,7 @@ ul, #myUL {
 	margin		:0 0 0 -1px;
 	margin-left	:10px;
 	font-size	:15px;
-	width:250px;
+	width:200px;
 	height:25px;
 	text-align: center;
 	cursor: pointer;
@@ -331,7 +356,7 @@ ul, #myUL {
 	margin-left:5px;
 	margin-top:-1px;
 	position:relative;
-	width	:1150px;
+	width	:91vw;
 	height:400px;
   overflow: auto;
 }
@@ -342,7 +367,7 @@ ul, #myUL {
 	padding-left:15px;
 	top:1px;
 	left:1px;
-	width	:1150px;
+	width	:93vw;
 }
 .current{
 	z-index:1001;
@@ -350,7 +375,7 @@ ul, #myUL {
 .col-one-menu{
 	float:left;
 	position:relative;
-	width	:1150px;
+	width	:91vw;
 }
 
 
@@ -728,25 +753,25 @@ ul, #myUL {
 
 .menu,.menu-current{
 	height			:40px;
-	width			:300px;
+	width			:500px;
 	border-radius	:7px;
 	border			:0px solid black;
 	border-bottom	:1px solid black;
 	border-right	:1px solid black;
 	background		:#fff;
-	text-align		:left;
+	text-align		:center;
 	padding-top	:10px;
 	padding-left	:10px;
 	font-size		:17px;
 	font-weight		:normal;
-  position		:absolute;
+  position		:relative;
   overflow		:hidden;
 	z-index			:100;
   box-shadow		:0 0 15px rgba(0,0,0,.5);
 	transition: border-radius 0.5s ease-in-out;
 }
 .menu-current{
-	width			:330px;
+	width			:550px;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
 	background		:#f0ffda;

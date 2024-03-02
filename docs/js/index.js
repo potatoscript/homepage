@@ -61,13 +61,13 @@ $( document ).ready(function() {
 	});
 	
 	document.getElementById("caret3").addEventListener("click", function() {
-	  if(t3==0){
-		  $(".nested3").hide();
-		  t3=1;
-	  }else{
-		  $(".nested3").show();
-		  t3=0;
-	  }		  
+		if(t3==0){
+			$(".active3").show();
+			t3=1;
+		}else{
+			$(".active3").hide();
+			t3=0;
+		}			  
 	  this.classList.toggle("caret-down3");
 	});
 	
@@ -115,18 +115,19 @@ $( document ).ready(function() {
    var allContentBoxes  = $(".content-box-menu");
    var allTabs          = $(".tabs-menu li a");
 
-	$(".box-wrapper-menu").css({
-		"width":1160+"px",
-		"height":4600+"px"
-   });
    $("#table-skill").css({
-		"width":1150+"px"
+		"width":91+"vw"
    });
-   $(".content-box-menu,.col-one-menu col").css({
-		"width":1950+"px",
-		"height":4590+"px",
+   $(".col-one-menu col").css({
+		"width":89+"px",
+		"height":4500+"px",
 		"overflow":"auto"
    });
+   $(".content-box-menu").css({
+	"width":91+"px",
+	"height":4590+"px",
+	"overflow":"auto"
+});
 
 	
 	setMenuSize();
@@ -205,13 +206,13 @@ $( document ).ready(function() {
 	
 	$('.menu')
       .mouseenter(function(){ 
-          $.collapse($('.menu-current'),300,40);
+          $.collapse($('.menu-current'),500,40);
 		  $('.menu-current').css({
 			"border-top-right-radius": "7px",
 			"border-bottom-right-radius": "7px",  
 			"background":"white"
 		  })
-		  $.expand($(this),330,40);
+		  $.expand($(this),550,40);
 		  $(this).css({
 			"border-top-right-radius": "20px",
 			"border-bottom-right-radius": "20px",  
@@ -220,14 +221,14 @@ $( document ).ready(function() {
 		  
       })
       .mouseleave(function(){
-        $.collapse($(this),300,40);
+        $.collapse($(this),500,40);
 		$(this).css({
 			"border-top-right-radius": "7px",
 			"border-bottom-right-radius": "7px",  
 			"background":"white"
 		  })
 		  
-		  $.expand($('.menu-current'),330,40);
+		  $.expand($('.menu-current'),550,40);
 		  $(".menu-current").css({
 			"border-top-right-radius": "20px",
 			"border-bottom-right-radius": "20px",  
@@ -244,13 +245,13 @@ $( document ).ready(function() {
 			"background":"white"
 		  })
 		  
-		  $.collapse($('.menu'),300,40);
+		  $.collapse($('.menu'),500,40);
 		  $(".menu").css({
 			"border-top-right-radius": "7px",
 			"border-bottom-right-radius": "7px",  
 			"background":"white"
 		  })
-		  $.expand($(this),330,40);
+		  $.expand($(this),550,40);
 		  $(this).css({
 			"border-top-right-radius": "20px",
 			"border-bottom-right-radius": "20px",  
@@ -578,15 +579,15 @@ function setMenuSize(){
 	try{
 		
 		$(".box-wrapper-menu").css({
-		"width":window.innerWidth-300+"px",
-		"height":window.innerHeight-80+"px"
+		"width":95+"vw",
+		"height":77+"vh"
 	   });
 	   $("#table-skill").css({
 			"width":750+"px"
 	   });
 	   $(".content-box-menu,.col-one-menu col").css({
-			"width":window.innerWidth-310+"px",
-			"height":window.innerHeight-90+"px",
+			"width":93+"vw",
+			"height":75+"vh",
 			"overflow":"auto"
 	   });
 		
