@@ -333,10 +333,12 @@ function docDownload(){
 function hrefClick(a){ //to select the tab id
   	hrefSelector=a;
 	if(a=="one"){
+		radarSkill();
 		doughnutLocation();
+		
 	}
 	if(a=="two"){
-		radarSkill();
+		
 	}
 };
 function ifReadyThenReset(){

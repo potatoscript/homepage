@@ -78,11 +78,11 @@
 				<div id="menu_tabs">
 					<ul class="tabs-menu" >
 						<li><a onclick="hrefClick('one')">
-							🥔.jsの概略
+							🥔Potato.js
 							</a>
 						</li>
 						<li><a onclick="hrefClick('two')">
-							📚 使用マニュアル
+							📚 Python
 							</a>
 						</li>
 						<li><a onclick="hrefClick('three')">
@@ -94,16 +94,18 @@
 					<div class="box-wrapper-menu">
 						<div id="one" class="content-box-menu">
 							<div class="col-one-menu col">
+                                <div id="div_potato" style="margin-top:20px">
+                                    <button class="button-55 pmenu" role="button">P<span class="word">erformance</span></button>
+                                    <button class="button-55 pmenu" role="button">O<span class="word"> user-friendly</span></button>
+                                    <button class="button-55 pmenu" role="button">T<span class="word">ime-Saving</span></button>
+                                    <button class="button-55 pmenu" role="button">A<span class="word">ccessibility</span></button>
+                                    <button class="button-55 pmenu" role="button">T<span class="word">eachable</span></button>
+                                    <button class="button-55 pmenu" role="button">O<span class="word">ptimized</span></button>
+                                </div>
 								<ul id="myUL">
-									<li><span id="caret-basic" class="caret2">What is Potato.js</span>
+									<!-- <li><span id="caret-basic" class="caret2">What is Potato.js</span>
 										<ul class="active" >
-                                            <div id="div_pims">
-                                                <button class="button-55 menu"  role="button">P<span class="word">otato</span></button>
-                                                <button class="button-55 menu" role="button">I<span class="word">情報</span></button>
-                                                <button class="button-55 menu" role="button">M<span class="word">管理</span></button>
-                                                <button class="button-55 menu" role="button">S<span class="word">ｼｽﾃﾑ</span></button>
-                                            </div>
-
+                                            
                                             <p id="txtOnCreate">
                                             <script>
                                                 var i = 0;
@@ -156,11 +158,371 @@ O - Optimized: Highlighting the need to optimize systems and tools for efficienc
                                             </script>
                                             </p>
                                             <code>
-                                                <textarea style="padding:20px;font-size: 18px;background:transparent;border:0px;width:1000px;height:800px">
+                                                <textarea style="sfont-size: 18px;background:transparent;border:0px;width:1000px;height:800px">
                                                 </textarea>
                                             </code>
 										</ul>
-								   </li>
+								   </li> -->
+                                   <li><span id="caret-basic" class="caret2">◎ Potato's Objects: <font style="font-size: 13px;"> (各オブジェクトコードの基本的な構文)</font></span>
+                                        <ul class="active">
+                                            <P>
+                                                <ul style=" list-style-type: none;">
+                                                    <li><h3 style="color: green;">■ POTATO-BUTTON</h3>
+                                                        <section>
+                                                            <div class="code-example">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <potato-button-obutton 		  
+                                                                                marginTop="10px"
+                                                                                background="yellow"		  
+                                                                                value="Click Me"
+                                                                                image="image/img-p.png 21 21"		       
+                                                                                onclick="alert('I am OButton')"
+                                                                            ></potato-button-obutton>
+                                                                        </td>
+                                                                        <td style="vertical-align: top;">
+                                                                            <p style="margin-left: 30;color: green;">&lt;potato-button-buttonID </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="Click Me" </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">background</font>="yellow"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>="10px"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">image</font>="image/img-p.png 21 21"</p> 
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">onclick</font>="alert('I am OButton')"</p>
+                                                                            <p style="margin-left: 1px;color: green;">&gt&lt/potato-button-buttonID&gt;</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </section>
+                                                     </li>
+                                                     <br>
+                                                     <li><h3 style="color: green;">■ POTATO-CALENDAR</h3>
+                                                        <section>
+                                                            <div class="code-example">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <potato-calendar-ocalendar 		  
+                                                                                marginTop=-15px
+                                                                                value=potato.today()	
+                                                                            ></potato-calendar-ocalendar>
+                                                                        </td>
+                                                                        <td style="vertical-align: top;">
+                                                                            <p style="margin-left: 30;color: green;">&lt;potato-calendar-calendarID </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>="-15px" </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="potato.today()" </p>
+                                                                            <p style="margin-left: 1px;color: green;">&gt&lt/potato-calendar-calendarID&gt;</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </section>
+                                                     </li>
+                                                     <br>
+                                                     <li><h3 style="color: green;">■ POTATO-LIST</h3>
+                                                        <section>
+                                                            <div class="code-example">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <potato-list-olist
+                                                                                marginTop=-15px
+                                                                                width=180px		    
+                                                                                data='[
+                                                                                    ["Menu","Image","Calories","Fat"],
+                                                                                    ["Parmesan Roasted Potato","<img src=\"image/Maple-Bacon Hasselback.jpg\" width=\"150px\" height=\"100px\">","183","13"],
+                                                                                    ["Mashed Potato","<img src=\"image/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
+                                                                                    ]'	    
+                                                                            ></potato-list-olist>
+                                                                        </td>
+                                                                        <td style="vertical-align: top;">
+                                                                            <p style="margin-left: 30;color: green;">&lt;potato-list-listID </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>=-15px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=180px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+                                                                                ["Menu","Image","Calories","Fat"],<br>
+                                                                                ["Parmesan Roasted Potato","&ltimg src='images/Parmesan Roasted Potato.jpg' width='150px' height='100px'&gt","183","13"],<br>
+                                                                                ["Mashed Potato","&ltimg src='images/Mashed Potato.jpg' width='150px' height='100px'&gt","455","55"]<br>
+                                                                            ]'<br>	
+                                                                            <p style="margin-left: 1px;color: green;">&gt&lt/potato-list-listID&gt;</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </section>
+                                                     </li>
+                                                     <br>
+                                                     <li><h3 style="color: green;">■ POTATO-TAB</h3>
+                                                        <section>
+                                                            <div class="code-example">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <o-tab-mytab
+                                                                                header = 'OButton || OText Box || OMenu'
+                                                                                body = '
+                                                                                <potato-button-mybtn1 value="button1"></potato-button-mybtn1>
+                                                                                <potato-button-mybtn2 value="button2"></potato-button-mybtn2>
+                                                                                <potato-button-mybtn3 value="button3"></potato-button-mybtn3>
+                                                                                ||
+                                                                                <potato-text-mytext value="test"/>
+                                                                                ||
+                                                                                menu content go over here.....
+                                                                                '
+                                                                                background=lightblue
+                                                                                color=blue
+                                                                                tabHeight=23px
+                                                                                tabWidth=100px
+                                                                                fontSize=18px
+                                                                                speed=1000
+                                                                                marginTop=10px
+                                                                                height=300px
+                                                                                width=350px	     
+                                                                            ></o-tab-mytab>
+                                                                        </td>
+                                                                        <td style="vertical-align: top;">
+                                                                            <p style="margin-left: 30;color: green;">&lt;potato-tab-tabID </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">header</font>='OButton || OText Box || OMenu'</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">body</font>='<br>
+                                                                                &ltpotato-button-mybtn1 value="button1"&gt &lt/potato-button-mybtn1&gt<br>
+                                                                                &ltpotato-button-mybtn2 value="button2"&gt &lt/potato-button-mybtn2&gt<br>
+                                                                                &ltpotato-button-mybtn3 value="button3"&gt &lt/potato-button-mybtn3&gt<br>
+                                                                                ||<br>
+                                                                                &ltpotato-text-mytext value="test"/&gt<br>
+                                                                                ||<br>
+                                                                                menu content go over here.....
+                                                                                '</p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">backgrtound</font>=lightblue </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">color</font>=blue </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">tabHeight</font>=23px </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">tabWidth</font>=100px </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSize</font>=18px </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">speed</font>=1000 </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>=10px </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=300px </p>
+                                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=350px </p>
+                                                                                <p style="margin-left: 1px;color: green;">&gt&lt/potato-tab-tabID&gt;</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </section>
+                                                     </li>
+                                                     <br>
+                                                     <li><h3 style="color: green;">■ POTATO-TABLE</h3>
+                                                        <section>
+                                                            <div class="code-example">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <o-table-mytable
+                                                                            dragdrop='
+                                                                                var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+                                                                                potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+                                                                                document.getElementById("mytableResult").innerHTML=t;
+                                                                                '		 
+                                                                                width=650px
+                                                                                height=200px
+                                                                                fontSizeTH=18px
+                                                                                fontSizeTD=20px
+                                                                                fontColorTD=red
+                                                                                header="No,Menu,Image,Calories,Fat"
+                                                                                data='[
+                                                                                ["1","Potato Pie","<img src=\"image/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
+                                                                                ["2","Mashed Potato","<img src=\"image/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
+                                                                                ]'
+                                                                                click=myTableClick()
+                                                                                callback=myTableCallback()
+                                                                                editCell="
+                                                                            trigger:click;
+                                                                                width:80px;
+                                                                                tool:default;
+                                                                                indexCol:0;
+                                                                                editCol:[1,2,3,4];
+                                                                                callback:
+                                                                                function(newVal,oldVal,targetCol,SelectCol){
+                                                                                document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
+                                                                                };
+                                                                                "
+                                                                                multipleSelect='
+                                                                                mark:〇;
+                                                                                indexCol:1;
+                                                                                selectCol:0;
+                                                                                callback:function(potato){
+                                                                                    $("#div_cart").html("");
+                                                                                    var t="";
+                                                                                    for(var i=0;i<potato.length;i++){
+                                                                                    t+=i+1+". "+potato[i]+"<br>";
+                                                                                    }
+                                                                                    $("#mytableResult").html(t);
+                                                                                };
+                                                                                '
+                                                                            /></o-table-mytable>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <p style="margin-left: 30;color: green;">&lt;potato-table-tableID </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>=-15px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=650px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=200px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSizeTH</font>=18px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSizeTD</font>=20px </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">fontCVolorTD</font>=red </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">header</font>="No,Menu,Image,Calories,Fat"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+                                                                                ["1","Potato Pie","&ltimg src=\"image/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\"&gt","183","13"],<br>
+                                                                            ["2","Mashed Potato","&ltimg src=\"image/Mashed Potato.jpg\" width=\"100px\" height=\"60px\"&gt","455","55"]<br>
+                                                                            ]'</p>	
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>=myTableClick() </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">callback</font>=myTableCallback() </p>
+                                                                            <p> dragdrop='
+                                                                                var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+                                                                                potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+                                                                                document.getElementById("mytableResult").innerHTML=t;
+                                                                                '	</p>
+                                                                            <p>editCell="
+                                                                            trigger:click;
+                                                                            width:80px;
+                                                                            tool:default;
+                                                                            indexCol:0;
+                                                                            editCol:[1,2,3,4];
+                                                                            callback:
+                                                                            function(newVal,oldVal,targetCol,SelectCol){
+                                                                            document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
+                                                                            };
+                                                                            "</p>
+                                                                            <p>
+                                                                            multipleSelect='
+                                                                                mark:〇;
+                                                                                indexCol:1;
+                                                                                selectCol:0;
+                                                                                callback:function(potato){
+                                                                                    $("#div_cart").html("");
+                                                                                    var t="";
+                                                                                    for(var i=0;i<potato.length;i++){
+                                                                                        t+=i+1+". "+potato[i]+"<br>";
+                                                                                    }
+                                                                                    $("#mytableResult").html(t);
+                                                                                };
+                                                                            '</p>
+                                                                            <p style="margin-left: 1px;color: green;">&gt&lt/potato-table-tableID&gt;</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </section>
+                                                     </li>
+                                                     <br>
+                                                     <li><h3 style="color: green;">■ POTATO-CHART</h3>
+                                                        <section>
+                                                            <div class="code-example">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <canvas id="skillChart" width="650px" height="300px"></canvas>
+                                                                            <potato-chart-chartID 		  
+                                                                                chartType="bar"
+                                                                                stacked=true
+                                                                                data='[
+                                                                                    ["Menu1","1","3","4","8"],
+                                                                                    ["Menu2","2","5","7","14"],
+                                                                                    ["Menu3","3","1","4","8"],
+                                                                                    ["Menu4","5","7","12","24"]
+                                                                                ]'		      
+                                                                                border="0px solid black"
+                                                                                colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+                                                                                xLabelData=menu1,menu2,menu3,menu4
+                                                                                xLabelAngle=10
+                                                                                yAxesLabel="g"
+                                                                                y2AxesLabel="calories"
+                                                                                data2Label="calories"
+                                                                                dataLabel="Protein,Fat,Sugar"
+                                                                                labelFontSize=18
+                                                                                label2FontSize=18
+                                                                                legendDisplay=true
+                                                                                legendPosition="bottom"
+                                                                                pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+                                                                                pointBorderWidth="2,2,2"
+                                                                                pointStyle="rect,rectRot,triangle"
+                                                                                title="Potato Chart BAR"
+                                                                                titleDisplay=true
+                                                                                height=330px
+                                                                                width=500px
+                                                                                click='return alert(potato.chartYvalue)'
+                                                                            ></potato-chart-chartID>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="vertical-align: top;">
+                                                                            <p style="margin-left: 30;color: green;">&lt;potato-chart-chartID </p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">chartType</font>=Bar</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">stacked</font>=true</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
+                                                                                    ["Menu1","1","3","4","8"],<br>
+                                                                                    ["Menu2","2","5","7","14"],<br>
+                                                                                    ["Menu3","3","1","4","8"],<br>
+                                                                                    ["Menu4","5","7","12","24"]<br>
+                                                                                ]'<br>		      
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">border</font>="0px solid black"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">colorIndex</font>="#e3ff7f,#a1a4ff,yellow,orange,green,grey"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelData</font>=menu1,menu2,menu3,menu4</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelAngle</font>=10</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">y2AxesLabel</font>="calories"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">data2Label</font>="calories"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">dataLabel</font>="Protein,Fat,Sugar"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">labelFontSize</font>=18</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">label2FontSize</font>=18</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">legendDisplay</font>=true</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">legendPosition</font>="bottom"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderColorIndex</font>="red,blue,yellow,orange,green,grey"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderWidth</font>="2,2,2"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">pointStyle</font>="rect,rectRot,triangle"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">title</font>="my OChart BAR"</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">titleDisplay</font>=true</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=330px</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=500px</p>
+                                                                            <p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>='return alert(potato.chartYvalue)'</p>
+                                                                            <p style="margin-left: 1px;color: green;">&gt&lt/potato-chart-chartID&gt;</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </section>
+                                                     </li>
+                                                     <br>
+                                                       
+                                                
+                                                     <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
+                                                     ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
+                                                     </li>
+                                                       <potato-keypad-okeypad 
+                                                              marginTop=-15px					    
+                                                          value="0"
+                                                              top=-220px
+                                                          left=-150px			    
+                                                          htm="htm/keypad.htm"
+                                                       ></potato-keypad-okeypad>
+                                                    <li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a>
+                                                     </li>  
+                                                    <p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
+                                                    <li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a>
+                                                     ＜o-table-tableid＞＜o-table-tableid＞<br>
+                                                    try to drag and drop me	
+                                                     </li> 
+                                                    
+                                                    <div id="mytableResult"></div>	
+                                                      <br>	
+                                                     <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a>
+                                                         ＜potato-text-textid＞＜/potato-text-textid＞
+                                                    </li>
+                                                      <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
+                                                      <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
+                                                    
+                                                  </ul>	
+                                            </P>
+                                        </ul>
+                                   </li>
 								   <li><br><span id="caret2" class="caret2">構築:</span>
 										<ul class="active2">
 											<section>
@@ -175,370 +537,12 @@ O - Optimized: Highlighting the need to optimize systems and tools for efficienc
 								  </li>
 								</ul>
 							</div>
-                            <iframe id="boygirl" scrolling="no" style="overflow:hidden;border:0px;height:0px;width:900px" src="empty.html"></iframe>
-
 						</div>
 						<div id="two" style="display:none" class="content-box-menu">
 							<div class="col-one-menu col">
 
-								<P>
-                                    <h3>◎ Potato's Objects: <span style="font-size: 13px;"> (各オブジェクトコードの基本的な構文)</span>	</h3>
-                                    <ul style=" list-style-type: none;">
-                                        <li><h3 style="color: green;">■ POTATO-BUTTON</h3>
-                                            <section>
-                                                <div class="code-example">
-                                                    <table>
-                                                        <tr>
-                                                            <td style="vertical-align: top;">
-                                                                <potato-button-obutton 		  
-                                                                    marginTop="10px"
-                                                                    background="yellow"		  
-                                                                    value="Click Me"
-                                                                    image="image/img-p.png 21 21"		       
-                                                                    onclick="alert('I am OButton')"
-                                                                ></potato-button-obutton>
-                                                            </td>
-                                                            <td style="vertical-align: top;">
-                                                                <p style="margin-left: 30;color: green;">&lt;potato-button-buttonID </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="Click Me" </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">background</font>="yellow"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>="10px"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">image</font>="image/img-p.png 21 21"</p> 
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">onclick</font>="alert('I am OButton')"</p>
-                                                                <p style="margin-left: 30px;color: green;">/potato-button-buttonID&gt;</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                         </li>
-                                         <br>
-                                         <li><h3 style="color: green;">■ POTATO-CALENDAR</h3>
-                                            <section>
-                                                <div class="code-example">
-                                                    <table>
-                                                        <tr>
-                                                            <td style="vertical-align: top;">
-                                                                <potato-calendar-ocalendar 		  
-                                                                    marginTop=-15px
-                                                                    value=potato.today()	
-                                                                ></potato-calendar-ocalendar>
-                                                            </td>
-                                                            <td style="vertical-align: top;">
-                                                                <p style="margin-left: 30;color: green;">&lt;potato-calendar-calendarID </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>="-15px" </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">value</font>="potato.today()" </p>
-                                                                <p style="margin-left: 30px;color: green;">/potato-calendar-calendarID&gt;</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                         </li>
-                                         <br>
-                                         <li><h3 style="color: green;">■ POTATO-LIST</h3>
-                                            <section>
-                                                <div class="code-example">
-                                                    <table>
-                                                        <tr>
-                                                            <td style="vertical-align: top;">
-                                                                <potato-list-olist
-                                                                    marginTop=-15px
-                                                                    width=180px		    
-                                                                    data='[
-                                                                        ["Menu","Image","Calories","Fat"],
-                                                                        ["Parmesan Roasted Potato","<img src=\"image/Maple-Bacon Hasselback.jpg\" width=\"150px\" height=\"100px\">","183","13"],
-                                                                        ["Mashed Potato","<img src=\"image/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
-                                                                        ]'	    
-                                                                ></potato-list-olist>
-                                                            </td>
-                                                            <td style="vertical-align: top;">
-                                                                <p style="margin-left: 30;color: green;">&lt;potato-list-listID </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>=-15px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=180px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
-                                                                    ["Menu","Image","Calories","Fat"],<br>
-                                                                    ["Parmesan Roasted Potato","&ltimg src='images/Parmesan Roasted Potato.jpg' width='150px' height='100px'&gt","183","13"],<br>
-                                                                    ["Mashed Potato","&ltimg src='images/Mashed Potato.jpg' width='150px' height='100px'&gt","455","55"]<br>
-                                                                ]'<br>	
-                                                                <p style="margin-left: 30px;color: green;">/potato-list-listID&gt;</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                         </li>
-                                         <br>
-                                         <li><h3 style="color: green;">■ POTATO-TAB</h3>
-                                            <section>
-                                                <div class="code-example">
-                                                    <table>
-                                                        <tr>
-                                                            <td style="vertical-align: top;">
-                                                                <o-tab-mytab
-                                                                    header = 'OButton || OText Box || OMenu'
-                                                                    body = '
-                                                                    <potato-button-mybtn1 value="button1"></potato-button-mybtn1>
-                                                                    <potato-button-mybtn2 value="button2"></potato-button-mybtn2>
-                                                                    <potato-button-mybtn3 value="button3"></potato-button-mybtn3>
-                                                                    ||
-                                                                    <potato-text-mytext value="test"/>
-                                                                    ||
-                                                                    menu content go over here.....
-                                                                    '
-                                                                    background=lightblue
-                                                                    color=blue
-                                                                    tabHeight=23px
-                                                                    tabWidth=100px
-                                                                    fontSize=18px
-                                                                    speed=1000
-                                                                    marginTop=10px
-                                                                    height=300px
-                                                                    width=350px	     
-                                                                ></o-tab-mytab>
-                                                            </td>
-                                                            <td style="vertical-align: top;">
-                                                                <p style="margin-left: 30;color: green;">&lt;potato-tab-tabID </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">header</font>='OButton || OText Box || OMenu'</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">body</font>='<br>
-                                                                    &ltpotato-button-mybtn1 value="button1"&gt &lt/potato-button-mybtn1&gt<br>
-                                                                    &ltpotato-button-mybtn2 value="button2"&gt &lt/potato-button-mybtn2&gt<br>
-                                                                    &ltpotato-button-mybtn3 value="button3"&gt &lt/potato-button-mybtn3&gt<br>
-                                                                    ||<br>
-                                                                    &ltpotato-text-mytext value="test"/&gt<br>
-                                                                    ||<br>
-                                                                    menu content go over here.....
-                                                                    '</p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">backgrtound</font>=lightblue </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">color</font>=blue </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">tabHeight</font>=23px </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">tabWidth</font>=100px </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSize</font>=18px </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">speed</font>=1000 </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">marginTop</font>=10px </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=300px </p>
-                                                                    <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=350px </p>
-                                                                <p style="margin-left: 30px;color: green;">/potato-tab-tabID&gt;</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                         </li>
-                                         <br>
-                                         <li><h3 style="color: green;">■ POTATO-TABLE</h3>
-                                            <section>
-                                                <div class="code-example">
-                                                    <table>
-                                                        <tr>
-                                                            <td style="vertical-align: top;">
-                                                                <o-table-mytable
-                                                                dragdrop='
-                                                                    var t="drag item ( "+potato.dragVal+" ) from ( "+ 
-                                                                    potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
-                                                                    document.getElementById("mytableResult").innerHTML=t;
-                                                                    '		 
-                                                                    width=650px
-                                                                    height=200px
-                                                                    fontSizeTH=18px
-                                                                    fontSizeTD=20px
-                                                                    fontColorTD=red
-                                                                    header="No,Menu,Image,Calories,Fat"
-                                                                    data='[
-                                                                    ["1","Potato Pie","<img src=\"image/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
-                                                                    ["2","Mashed Potato","<img src=\"image/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
-                                                                    ]'
-                                                                    click=myTableClick()
-                                                                    callback=myTableCallback()
-                                                                    editCell="
-                                                                trigger:click;
-                                                                    width:80px;
-                                                                    tool:default;
-                                                                    indexCol:0;
-                                                                    editCol:[1,2,3,4];
-                                                                    callback:
-                                                                    function(newVal,oldVal,targetCol,SelectCol){
-                                                                    document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
-                                                                    };
-                                                                    "
-                                                                    multipleSelect='
-                                                                    mark:〇;
-                                                                    indexCol:1;
-                                                                    selectCol:0;
-                                                                    callback:function(potato){
-                                                                        $("#div_cart").html("");
-                                                                        var t="";
-                                                                        for(var i=0;i<potato.length;i++){
-                                                                        t+=i+1+". "+potato[i]+"<br>";
-                                                                        }
-                                                                        $("#mytableResult").html(t);
-                                                                    };
-                                                                    '
-                                                                /></o-table-mytable>
-                                                            </td>
-                                                            <td style="vertical-align: top;">
-                                                                <p style="margin-left: 30;color: green;">&lt;potato-table-tableID </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">margintop</font>=-15px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=650px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=200px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSizeTH</font>=18px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontSizeTD</font>=20px </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">fontCVolorTD</font>=red </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">header</font>="No,Menu,Image,Calories,Fat"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
-                                                                    ["1","Potato Pie","&ltimg src=\"image/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\"&gt","183","13"],<br>
-                                                                ["2","Mashed Potato","&ltimg src=\"image/Mashed Potato.jpg\" width=\"100px\" height=\"60px\"&gt","455","55"]<br>
-                                                                ]'</p>	
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>=myTableClick() </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">callback</font>=myTableCallback() </p>
-                                                                <p> dragdrop='
-                                                                    var t="drag item ( "+potato.dragVal+" ) from ( "+ 
-                                                                    potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
-                                                                    document.getElementById("mytableResult").innerHTML=t;
-                                                                    '	</p>
-                                                                <p>editCell="
-                                                                trigger:click;
-                                                                width:80px;
-                                                                tool:default;
-                                                                indexCol:0;
-                                                                editCol:[1,2,3,4];
-                                                                callback:
-                                                                function(newVal,oldVal,targetCol,SelectCol){
-                                                                document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
-                                                                };
-                                                                "</p>
-                                                                <p>
-                                                                multipleSelect='
-                                                                    mark:〇;
-                                                                    indexCol:1;
-                                                                    selectCol:0;
-                                                                    callback:function(potato){
-                                                                        $("#div_cart").html("");
-                                                                        var t="";
-                                                                        for(var i=0;i<potato.length;i++){
-                                                                            t+=i+1+". "+potato[i]+"<br>";
-                                                                        }
-                                                                        $("#mytableResult").html(t);
-                                                                    };
-                                                                '</p>
-                                                                <p style="margin-left: 3px;color: green;">&lt/potato-table-tableID&gt;</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                         </li>
-                                         <br>
-                                         <li><h3 style="color: green;">■ POTATO-CHART</h3>
-                                            <section>
-                                                <div class="code-example">
-                                                    <table>
-                                                        <tr>
-                                                            <td style="vertical-align: top;">
-                                                                <canvas id="skillChart" width="650px" height="300px"></canvas>
-                                                                <potato-chart-chartID 		  
-                                                                    chartType="bar"
-                                                                    stacked=true
-                                                                    data='[
-                                                                        ["Menu1","1","3","4","8"],
-                                                                        ["Menu2","2","5","7","14"],
-                                                                        ["Menu3","3","1","4","8"],
-                                                                        ["Menu4","5","7","12","24"]
-                                                                    ]'		      
-                                                                    border="0px solid black"
-                                                                    colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
-                                                                    xLabelData=menu1,menu2,menu3,menu4
-                                                                    xLabelAngle=10
-                                                                    yAxesLabel="g"
-                                                                    y2AxesLabel="calories"
-                                                                    data2Label="calories"
-                                                                    dataLabel="Protein,Fat,Sugar"
-                                                                    labelFontSize=18
-                                                                    label2FontSize=18
-                                                                    legendDisplay=true
-                                                                    legendPosition="bottom"
-                                                                    pointBorderColorIndex="red,blue,yellow,orange,green,grey"
-                                                                    pointBorderWidth="2,2,2"
-                                                                    pointStyle="rect,rectRot,triangle"
-                                                                    title="Potato Chart BAR"
-                                                                    titleDisplay=true
-                                                                    height=330px
-                                                                    width=500px
-                                                                    click='return alert(potato.chartYvalue)'
-                                                                ></potato-chart-chartID>
-                                                            </td>
-                                                            <td style="vertical-align: top;">
-                                                                <p style="margin-left: 30;color: green;">&lt;potato-chart-chartID </p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">chartType</font>=Bar</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">stacked</font>=true</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data</font>='[<br>
-                                                                        ["Menu1","1","3","4","8"],<br>
-                                                                        ["Menu2","2","5","7","14"],<br>
-                                                                        ["Menu3","3","1","4","8"],<br>
-                                                                        ["Menu4","5","7","12","24"]<br>
-                                                                    ]'<br>		      
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">border</font>="0px solid black"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">colorIndex</font>="#e3ff7f,#a1a4ff,yellow,orange,green,grey"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelData</font>=menu1,menu2,menu3,menu4</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">xLabelAngle</font>=10</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">y2AxesLabel</font>="calories"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">data2Label</font>="calories"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">dataLabel</font>="Protein,Fat,Sugar"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">labelFontSize</font>=18</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">label2FontSize</font>=18</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">legendDisplay</font>=true</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">legendPosition</font>="bottom"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderColorIndex</font>="red,blue,yellow,orange,green,grey"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">pointBorderWidth</font>="2,2,2"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">pointStyle</font>="rect,rectRot,triangle"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">title</font>="my OChart BAR"</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">titleDisplay</font>=true</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">height</font>=330px</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">width</font>=500px</p>
-                                                                <p style="margin-left: 50px;color:blue"><font style="color: red;">click</font>='return alert(potato.chartYvalue)'</p>
-                                                                <p style="margin-left: 30px;color: green;">/potato-chart-chartID&gt;</p>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </section>
-                                         </li>
-                                         <br>
-                                           
-                                    
-                                         <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
-                                         ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
-                                         </li>
-                                           <potato-keypad-okeypad 
-                                                  marginTop=-15px					    
-                                              value="0"
-                                                  top=-220px
-                                              left=-150px			    
-                                              htm="htm/keypad.htm"
-                                           ></potato-keypad-okeypad>
-                                        <li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a>
-                                         </li>  
-                                        <p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
-                                        <li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a>
-                                         ＜o-table-tableid＞＜o-table-tableid＞<br>
-                                        try to drag and drop me	
-                                         </li> 
-                                        
-                                        <div id="mytableResult"></div>	
-                                          <br>	
-                                         <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a>
-                                             ＜potato-text-textid＞＜/potato-text-textid＞
-                                        </li>
-                                          <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
-                                          <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
-                                        
-
-                                        
-                                      </ul>	
-                                </P>
+								
 							</div>
-                            <iframe id="boygirl" scrolling="no" style="overflow:hidden;border:0px;height:0px;width:60px" src="empty.html"></iframe>
-
 						</div>
 						<div id="three" style="display:none" class="content-box-menu">
 							<div class="col-one-menu col"  >
