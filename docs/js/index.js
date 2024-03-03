@@ -14,7 +14,9 @@ var t3 = 0;
 
 
 $( document ).ready(function() {
-	
+
+	radarSkill();
+
 	/*
 	var game = new Game(scr_width,scr_height);
     game.fps = 30;
