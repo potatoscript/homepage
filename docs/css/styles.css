@@ -13,22 +13,21 @@
   }
   
   
-  @import
-  url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
-  
+
   /* Remove default bullets */
-  ul, #myUL {
+  ul, #myUL, #myUL {
     list-style-type: none;
   }
   
   /* Remove margins and padding from the parent ul */
-  #myUL {
+  #myUL, #myUL2{
     margin: 0;
     padding: 0;
   }
+
   
   /* Style the caret/arrow */
-  .caret,.caret2,.caret3,.caretx,.caret-basic {
+  .caret,.caret-open {
     cursor: pointer;
     color: blue;
     user-select: none; /* Prevent text selection */
@@ -41,21 +40,7 @@
     display: inline-block;
     margin-right: 6px;
   }
-  .caret-basic::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-    transform: rotate(90deg);
-  }
-  .caret2::before {
-    content: "\25B6";
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-    transform: rotate(90deg);
-  }
-  .caret3::before {
+  .caret-basic::before,.caret-open::before {
     content: "\25B6";
     color: black;
     display: inline-block;
@@ -64,17 +49,13 @@
   }
   
   /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-  .caret-down::before,.caret-downx::before {
+  .caret-down::before,
+  .caret-down2::before,
+  .caret-down3::before,
+  .caret-down4::before,
+  .caret-down5::before,
+  .caret-down6::before{
     transform: rotate(90deg);
-  }
-  .caret-down2::before {
-    transform: rotate(0deg);
-  }
-  .caret-down3::before {
-    transform: rotate(0deg);
-  }
-  .caret-basic-down::before {
-    transform: rotate(0deg);
   }
   
   /* Hide the nested list */

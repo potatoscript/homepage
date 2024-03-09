@@ -38,8 +38,6 @@ p {
 }
 
 
-@import
-url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 
 /* Remove default bullets */
 ul, #myUL {
@@ -53,7 +51,7 @@ ul, #myUL {
 }
 
 /* Style the caret/arrow */
-.caret,.caret2,.caret3,.caretx,.caret-basic {
+.caret,.caret-open,.caret-close {
   cursor: pointer;
   color: blue;
   user-select: none; /* Prevent text selection */
@@ -73,14 +71,14 @@ ul, #myUL {
   margin-right: 6px;
   transform: rotate(90deg);
 }
-.caret2::before {
+.caret-open::before {
   content: "\25B6";
   color: black;
   display: inline-block;
   margin-right: 6px;
   transform: rotate(90deg);
 }
-.caret3::before {
+.caret-close::before {
   content: "\25B6";
   color: black;
   display: inline-block;
@@ -89,17 +87,18 @@ ul, #myUL {
 }
 
 /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-.caret-down::before,.caret-downx::before {
+.caret-down::before {
   transform: rotate(90deg);
 }
-.caret-down2::before {
+.caret-up::before {
   transform: rotate(0deg);
 }
-.caret-down3::before {
-  transform: rotate(90deg);
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active,.active2{
+  display: block;
 }
-.caret-basic-down::before {
-  transform: rotate(0deg);
+.active3,.active4,.active5,.active6{
+  display: none;
 }
 
 /* Hide the nested list */
@@ -110,16 +109,7 @@ ul, #myUL {
 	margin-left:20px;
 }
 
-/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-.active,.activex{
-  display: block;
-}
-.active2{
-  display: block;
-}
-.active3{
-  display: none;
-}
+
 
 
 .flipPotato{

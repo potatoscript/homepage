@@ -10,7 +10,9 @@ var hrefSelector        = "",
 var t = 0;
 var t2 = 0;
 var t3 = 0;
-
+var t4 = 0;
+var t5 = 0;
+var t6 = 0;
 
 
 $( document ).ready(function() {
@@ -47,7 +49,7 @@ $( document ).ready(function() {
 		  $(".active").show();
 		  t=0;
 	  }		  
-	  this.classList.toggle("caret-basic-down");
+	  this.classList.toggle("caret-up");
 	}); 
 	 
 	
@@ -59,7 +61,7 @@ $( document ).ready(function() {
 		  $(".active2").show();
 		  t2=0;
 	  }		  
-	  this.classList.toggle("caret-down2");
+	  this.classList.toggle("caret-up");
 	});
 	
 	document.getElementById("caret3").addEventListener("click", function() {
@@ -70,7 +72,40 @@ $( document ).ready(function() {
 			$(".active3").hide();
 			t3=0;
 		}			  
-	  this.classList.toggle("caret-down3");
+	  this.classList.toggle("caret-down");
+	});
+
+	document.getElementById("caret4").addEventListener("click", function() {
+		if(t4==0){
+			$(".active4").show();
+			t4=1;
+		}else{
+			$(".active4").hide();
+			t4=0;
+		}			  
+	  this.classList.toggle("caret-down");
+	});
+
+	document.getElementById("caret5").addEventListener("click", function() {
+		if(t5==0){
+			$(".active5").show();
+			t5=1;
+		}else{
+			$(".active5").hide();
+			t5=0;
+		}			  
+	  this.classList.toggle("caret-down");
+	});
+
+	document.getElementById("caret6").addEventListener("click", function() {
+		if(t5==0){
+			$(".active6").show();
+			t5=1;
+		}else{
+			$(".active6").hide();
+			t5=0;
+		}			  
+	  this.classList.toggle("caret-down");
 	});
 	
 	
