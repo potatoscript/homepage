@@ -105,6 +105,10 @@
                             🥔 Django
 						    </a>
 						</li>
+                        <li><a onclick="hrefClick('six')">
+                            ⚙ SETUP
+						    </a>
+						</li>
 					</ul>
                 <div class="box-wrapper-menu">
                     <div id="one" class="content-box-menu">
@@ -854,14 +858,165 @@ legend{
                     </div>
                     <div id="six" style="display:none" class="content-box-menu">
                         <div class="col-one-menu col"  >
-                            <div id="div_potato" style="margin-top:20px">
-                                <button class="button-55 pmenu" role="button">J<span class="word"> </span></button>
-                                <button class="button-55 pmenu" role="button">A<span class="word"> </span></button>
-                                <button class="button-55 pmenu" role="button">V<span class="word"> </span></button>
-                                <button class="button-55 pmenu" role="button">A<span class="word"> </span></button>
-                            </div>
-                            <br>
-                            <p></p>
+                            
+                            <table id="table-setup" class="table table-sm " style="background:white;margin:20px">
+                                <tr>
+                                    <td style="width:350px !important"><img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_logo_icon_146389.png" alt="PostgreSQL Icon" width="20" height="20"> PostgreSQL</td>
+                                    <td><a href="https://www.postgresql.org/download/" target="_blank">PostgreSQL: Downloads</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209316/git-icon-md.png" alt="Git Icon" width="20" height="20"> GIT</td>
+                                    <td><a href="https://git-scm.com/" target="_blank">Git (git-scm.com)</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitLab Icon" width="20" height="20"> GitHub</td>
+                                    <td><a href="https://github.com/" target="_blank">https://github.com/</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/313_Sourcetree_logo-512.png" alt="PostgreSQL Icon" width="20" height="20"> SourceTree</td>
+                                    <td><a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree | Free Git GUI for Mac and Windows</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://iconape.com/wp-content/png_logo_vector/visual-studio-code.png" alt="Visual Studio Code Icon" width="20" height="20"> VS Code</td>
+                                    <td><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code - Code Editing. Redefined</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: top;"><img src="https://www.expertosdecomputadoras.com/wp-content/uploads/2012/02/como%20instalar%20xampp%20eaccelerator%20en%20un%20mac.png" alt="XAMPP Icon" width="28" height="28"> Apache XAMPP</td>
+                                    <td>
+                                        <a href="https://www.apachefriends.org/download.html" target="_blank">XAMPP Installers and Downloads for Apache Friends</a>
+                                        <div class="wrapper" style="margin-top: -5px;"></div>
+                                        <div style="margin: 10px;font:16px;"><span class="title" type="text" name="title">■ XAMPP初期設定 + Hello Potato</span></div>
+                                            <table id="table-setup2" class="table table-sm caption-top table-bordered border-secondary" style="width:900px">
+                                        <tr>
+                                        <td rowspan="2">
+                                        ■ PORT設定<br><br>
+                                        <img src="https://dotblogsfile.blob.core.windows.net/user/yiru/a99ef580-034a-4b4b-9ec7-0146954ff7a9/1613563140.png" width="400px" height="200px">
+                                        <br><br><br><br>
+                                        ■ index.htmlの設定
+                                        </td>
+                                        <td>
+                                        <textarea placeholder="Enter something funny." class="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; font-size:15px; width:550px;height: 150px; ">
+既存ポートを80から8090のような他のポートに​変更してください。​
+ポート80はすでに他のシステムで使用されている​能性が高いであるためです。​
+Apacheをポート80で起動できる場合は、​そのまま80のままにしてもOKです。
+                                        </textarea>
+                                        <img src="https://th.bing.com/th/id/OIP.kGlEyDY3DBXm0bCg2pZXDwHaDk?pid=ImgDet&w=474&h=228&rs=1" width="400px" height="200px">
+                                    　</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <textarea placeholder="Enter something funny." class="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; font-size:15px; width:550px;height: 150px; ">
+「DirectoryIndex」を探し、​
+「index.html」をウェブサーバーの最優先​エントリーポイントに設定するために、​
+「index.html」を「index.php」の前に最初の位置に移動​してください。
+                                            </textarea>
+                                        　</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            ■ PostgresqlのDBドライバーの設定<br>
+                                            <img src="https://web888.vn/wp-content/uploads/2021/04/cai-dat-composer-su-dung-cho-xamp-tren-windows-1619427951880-622x400.jpg" width="450px" height="250px">
+                                        </td>
+                                        <td>
+                                            <textarea placeholder="Enter something funny." class="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; font-size:15px; width:550px;height: 150px; ">
+キーワード「pgsql」を探し、
+「extension=pdo_pgsql」と
+「extension=pgsql」の行のコメントアウトを​解除してください。
+                                            </textarea>
+                                        　</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p>■ First WEBシステム "Hello Potato"</p>
+                                            <textarea placeholder="Enter something funny." class="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; font-size:15px; width:950px;height: 300px; ">
+① 「スタート」ボタンをクリックしてApacheサーバーを起動し、Apacheが緑色になるまで待ちます。
+② "xampp"フォルダー内の "htdocs"フォルダーに移動し、
+    ​ "htdocs"フォルダー内のすべてのフイルを削除してください。​
+③ その後、"index.html"という名前のファイルを作成してください。
+④ 次に、「index.html」を編集してファイル内に「Hello Potato」と入力し、保存してください。​
+⑤ 最後に、ブラウザを開いて「localhost:8090」と入力し、"Hello Potato"が表示されれば、
+    おめでとうございます！あなたは最初のウェブアプリケーションを構築しました！​
+                                            </textarea>
+                                        </td>
+                                    </tr></table>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://www.svgrepo.com/show/354202/postman-icon.svg" alt="Postman Icon" width="20" height="20"> Postman</td>
+                                    <td><a href="https://www.postman.com/" target="_blank">Postman API Platform | Sign Up for Free</a></td>
+                                </tr>
+                                <tr>
+                                <td><img src="https://officeforest.org/wp/wp-content/uploads/2020/03/windows-512-300x300.png" alt="Internet Information Services Icon" width="28" height="28"> IIS（Internet Information Services）</td>
+                                <td>
+                                    <div class="wrapper" style="margin-top: -5px;">
+                                    <div style="margin: 10px;font:16px;"><span class="title" type="text" name="title">■ 先に下記の手順に従うことで、Windows システムに IIS をインストールできます。</span></div>
+                                    <textarea placeholder="Enter something funny." class="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; font-size:15px; width:950px;height: 1100px; ">
+1. コントロールパネルを開く：
+　Windows マシンのコントロールパネルに移動します。
+    
+2. プログラムと機能：
+　「プログラム」または「プログラムと機能」をクリックします。
+    
+3. Windows の機能の有効化または無効化：
+　「Windows の機能の有効化または無効化」というオプションを見つけてクリックします。
+    
+4. Internet Information Services (IIS) を選択：
+　表示されるウィンドウで、「Internet Information Services」を機能のリストから見つけます。
+　それを選択するための横にあるチェックボックスをチェックします。
+　必要に応じてカテゴリを展開して特定のコンポーネントを選択できます。
+    
+5. IIS のインストール：
+　必要なコンポーネントを選択した後、「OK」ボタンをクリックしてインストールプロセスを開始します。
+　Windows はその後、IIS およびそのコンポーネントをインストールします。
+    
+6. インストールの完了を待つ：
+　システム構成や選択したコンポーネントによっては、インストールに時間がかかる場合があります。
+　プロセスが完了するのを待ちます。
+    
+7. インストールの確認：
+　インストールが完了したら、「inetmgr」と入力して Windows 検索バーで Enter キーを押します。
+　これにより、Internet Information Services (IIS) マネージャーが開き、IIS が正常にインストールされていることが示されます。
+                                    </textarea>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <td><img src="https://pngimg.com/uploads/php/php_PNG43.png" alt="PHP" width="28" height="28"> PHP（PHP Hypertext Preprocessor）</td>
+                                <td>
+                                    <a href="https://www.php.net/downloads" target="_blank">PHP Installers</a>
+                                    <div class="wrapper" style="margin-top: -5px;">
+                                    <div style="margin: 10px;font:16px;"><span class="title" type="text" name="title">■ IISを構成して、.phpファイルの拡張子をPHP FastCGIモジュールにマッピングしてPHPファイルを処理する。</span></div>
+                                    <textarea placeholder="Enter something funny." class="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; font-size:15px; width:1100px;height: 1100px; ">
+1. IISマネージャーを開く：
+    Windowsサーバーに移動し、Internet Information Services（IIS）マネージャーを開きます。
+    通常、スタートメニューで「IISマネージャー」と検索して見つけることができます。
+2. サーバーを選択：
+    左側の接続パネルで、サーバーノードを展開して選択します。
+3. ハンドラーマッピングを開く：
+    中央のペインで「ハンドラーマッピング」をダブルクリックします。
+    これにより、サーバーのハンドラーマッピングのリストが表示されます。
+4. モジュールマッピングの追加：
+    右側のアクションパネルで「モジュールマッピングの追加」をクリックします。
+    これにより、新しいハンドラーマッピングを追加するためのダイアログボックスが開きます。
+5. マッピングを構成する：
+    - リクエストパス：「*.php」と入力します（引用符なし）。
+        これは、.php拡張子を持つファイルに対してハンドラーが呼び出されることを指定します。
+    - モジュール：ドロップダウンリストから「FastCgiModule」を選択します。
+    - 実行可能ファイル：php-cgi.exe実行可能ファイルへの完全なパスを入力します。
+                        たとえば、PHPインストールに応じて「C:\php\php-cgi.exe」になる場合があります。
+    - 名前：ハンドラーマッピングに名前を付けます。
+            たとえば、「PHP_via_FastCGI」などです。
+6. マッピングを保存：
+    マッピングを保存するには、OKをクリックします。
+
+これらの手順を完了すると、IISが.php拡張子を持つリクエストをPHP FastCGIモジュールにルーティングし、
+サーバーでPHPスクリプトを実行できるようになります。
+                                    </textarea>
+                                    </div>
+                                </td>
+                                </tr>
+                            </table>
+                              
                             <div style="height:1000px"></div>			
                         </div>
                     </div>	
@@ -886,7 +1041,20 @@ legend{
 
   </body>
 
-
+<style>
+    #table-setup{
+        border-collapse: collapse;
+        width:1200px;
+    }
+    #table-setup td{
+        padding:10px;
+        vertical-align: top;
+        border:1px solid black;
+    }
+    #table-setup2{
+        border-collapse: collapse;
+    }
+</style>
 
 
 </html>
